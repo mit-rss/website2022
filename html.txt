@@ -4,7 +4,7 @@
 <p>You can change the template design as much as you want - in fact we want you to!
 This website is pretty boring right now. Use pictures, videos, gifs and stories from your racecar experience to make this website pop!</p>
 <p>There are a couple constraints however. First, your lab reports must remain accessible at these links:</p>
-<pre><code>https:://github.mit.edu/pages/rss2021-[TEAM_NUMBER]/website/labs/[LAB_NUMBER]
+<pre><code>https://github.mit.edu/pages/rss2021-[TEAM_NUMBER]/website/labs/[LAB_NUMBER]
 </code></pre>
 <p>Also for the sake of the graders, please make sure that the text remains <strong>black on white</strong>.</p>
 <p>And finally don't add too much javascript/bloat.
