@@ -1,0 +1,45 @@
+<h1>RSS Team TA!</h1>
+<p>Christopher Hughes (hughes20@mit.edu), Abbie Lee (abbielee@mit.edu)</p>
+<h2>Modifying the template</h2>
+<p>You can change the template design as much as you want - in fact we want you to!
+This website is pretty boring right now. Use pictures, videos, gifs and stories from your racecar experience to make this website pop!</p>
+<p>There are a couple constraints however. First, your lab reports must remain accessible at these links:</p>
+<pre><code>https:://github.mit.edu/pages/rss2019-[TEAM_NUMBER]/website/labs/[LAB_NUMBER]
+</code></pre>
+<p>Also for the sake of the graders, please make sure that the text remains <strong>black on white</strong>.</p>
+<p>And finally don't add too much javascript/bloat.
+We're going to need to go through a whole bunch of these websites rapidly
+and we don't want it to feel like learning modules.</p>
+<h2>Setting up the template</h2>
+<p>You will be hosting this template using <a href="https://pages.github.com/">github pages</a>.
+If you haven't already done so, have your team make an organization on <a href="github.mit.edu">github.mit.edu</a>.
+Make sure your organization is named <code>rss2020-#</code> where "#" is your team number (not your car number!). Do not pad the number with zeros.</p>
+<p>Then fork this repo into your organization.
+In the settings page of the forked repo scroll down to the "Github Pages" section. Under "Source", click the dropdown menu and select "master branch" then hit save.
+You should now be able to see the template if you navigate to:</p>
+<pre><code>https://github.mit.edu/pages/rss2019-[TEAM_NUMBER]/website/
+</code></pre>
+<p>Now in order to modify the template, clone your fork and read on to the next section.</p>
+<h2>Using the template</h2>
+<p>We've made this template as straightforward as we could to use.
+You can edit this directly using HTML if you want (recommended to at least to attempt to change html things, but do not break the paths of the website). We also proved a file md_make.py which allows you to write things in markdown and converts into HTML for you to copy and put into your website.</p>
+<pre><code>https://github.mit.edu/pages/rss2019-[TEAM_NUMBER]/website/my/directory
+</code></pre>
+<p>Running the python script requires a small library for converting markdown, so first run:</p>
+<pre><code>sudo apt-get install python3-pip
+sudo pip3 install mistune
+</code></pre>
+<p>Then, if for example you wanted to edit your lab 3 report you would do the following:</p>
+<h3>To Edit labs</h3>
+<ol>
+<li>Make a markdown file for your lab three</li>
+<li>Edit the md_make.py to read this file and save it to the output</li>
+<li>Take that output and copy it into the relative lab index.HTML</li>
+<li>To view changes that are made to your website commit them and refresh the page</li>
+</ol>
+<p>The template also supports $\LaTeX$ via mathjax (this is a script at the beginning of the html lab files)! For inline math use single dollar signs  and for multiline math use use double dollar signs like this:</p>
+<p>$$
+\begin{align}
+  e^{i\pi} + 1 = 0
+\end{align}
+$$</p>

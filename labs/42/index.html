@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<title>RSS Team TA</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+
+body, html {
+  height: 100%;
+  line-height: 1.8;
+}
+
+/* Full height image header */
+.title_img {
+  background-position: center;
+  background-size: cover;
+  background-image: url("../../img/mit.jpg");
+  height: 30%;
+  /* max-height: 30%; */
+}
+
+.w3-bar .w3-button {
+  padding: 16px;
+}
+</style>
+<!-- THESE ARE SCRIPTS FOR LATEX MATH TO RENDER-->
+<script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$']],displayMath: [['$$','$$']],skipTags: ["script","noscript","style","textarea","code"]},TeX: {equationNumbers: {autoNumber: "AMS"}}});</script>
+<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML"></script>
+
+<body>
+<!-- If you change something in the Navbar you have to change it on each page (sit on top) -->
+<!-- MAKE SURE YOU GET THE RELAITVE PATHS RIGHT FOR THE NAV BAR!!!!-->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-card" id="myNavbar">
+    <a href="../#home" class="w3-bar-item w3-button w3-wide">RSS Team TA</a>
+    <!-- Right-sided navbar links -->
+    <div class="w3-right w3-hide-small">
+      <a href="../../#about" class="w3-bar-item w3-button">About</a>
+      <a href="../" class="w3-bar-item w3-button"><i class="fa fa-folder"></i>Labs</a>
+      <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="w3-bar-item w3-button"><i class="fa fa-camera"></i>Videos</a>
+      <a href="https://github.com/mit-rss" class="w3-bar-item w3-button"><i class="fa fa-github-square"></i>Github</a>
+    </div>
+    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+</div>
+
+
+<!-- Sidebar on small screens when clicking the menu icon -->
+<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close X</a>
+  <a href="../../#about" onclick="w3_close()" class="w3-bar-item w3-button">About</a>
+  <a href="../" onclick="w3_close()" class="w3-bar-item w3-button">Labs</a>
+  <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" onclick="w3_close()" class="w3-bar-item w3-button">Videos</a>
+  <a href="https://github.com/mit-rss/" onclick="w3_close()" class="w3-bar-item w3-button">Github</a>
+</nav>
+
+<header class="title_img w3-display-container w3-grayscale-min">
+  <div class="w3-display-bottommiddle w3-text-white">
+    <h1>Team TA!</h1>
+  </div>
+</header>
+<!-- End of repeated content on each page-->
+
+
+
+<div class="w3-container w3-black" id="lab42">
+  <div class="w3-block w3-grey w3-center" style="margin-top:64px">
+    <h1>Lab 42: Life</h1>
+  </div>
+  <div class="w3-block w3-white" style="padding:16px 16px">
+    <!-- Inlude your presentation in your site by exporting it via google slides!!-->
+    <p> Alternatively you can do include a pdf of your lab report if you want to do it in LaTeX </p>
+    <p> You can also include your presentation in none link form if you want. To do this just google including google slides in html</p>
+    <p><a href="https://docs.google.com/presentation/d/1h_3ZTNyov7ng4Jzq9BDFXyGzKKffovH_TYSR2nMy49E/edit?usp=sharing">Link to Presentation</a></p>
+    <p><a href="lab_report_1.pdf" download>Link to Download Lab Report</a></p>
+    <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRpW1Xoe9_g0XDnndzGZCJ7oWnZjtMupPmKlLa4PvGi_4eqlTEPjfyD1P0sq6FPt-flkR9QEF-b5H6f/embed?start=true&loop=true&delayms=3000" frameborder="0" width=95% height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+    <object data="lab_report_1.pdf" type="application/pdf" width="720px" height="935px">
+      <embed src="lab_report_1.pdf">
+      </embed>
+    </object>
+    <!--Include a PDF of your lab repoty Here!! -->
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-64">
+  <div class="w3-col l4 m4">
+    <!-- Link this button to the previous lab (lab home if nothing else)-->
+    <a href="../-99" class="w3-button w3-light-grey"><i class="fa fa-arrow-left w3-margin-right"></i>Lab -99</a>
+  </div>
+  <div class="w3-col l4 m4">
+    <!-- Link this button to the current lab-->
+    <a href="#lab42" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>  </div>
+  <div class="w3-col l4 m4">
+    <!-- Link this button to the next lab-->
+    <a href="../" class="w3-button w3-light-grey">Lab Home<i class="fa fa-arrow-right w3-margin-right"></i></a>
+  </div>
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+</footer>
+
+</html>
