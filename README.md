@@ -10,7 +10,7 @@ This website is pretty boring right now. Use pictures, videos, gifs and stories 
 There are a couple constraints however. First, your lab reports must remain accessible at these links:
 
 
-    https://github.mit.edu/pages/rss2020-[TEAM_NUMBER]/website/labs/[LAB_NUMBER]
+    https://github.mit.edu/pages/rss2021-[TEAM_NUMBER]/website/labs/[LAB_NUMBER]
 
 
 Also for the sake of the graders, please make sure that the text remains **black on white**.
