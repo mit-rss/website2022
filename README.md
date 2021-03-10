@@ -57,7 +57,7 @@ Running the python script requires a small library for converting markdown, so f
 Then, if for example you wanted to edit your lab 3 report you would do the following:
 
 
-###To Edit labs
+### To Edit labs
 1. Make a markdown file for your lab three
 2. Edit the md_make.py to read this file and save it to the output
 3. Take that output and copy it into the relative lab index.HTML
