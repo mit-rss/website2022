@@ -40,11 +40,15 @@ If you would like more creative freedom, you are also welcome to render your rep
 Another option is to write your report in markdown and then run the provided `md_make.py` script, which will generate an `html.txt` file with your report translated into HTML. To render this on your website, paste the contents of `html.txt` into your `index.html` file (see `/labs/example_lab/index.html` for where to paste). You will have to edit `md_make.py` to read from the correct filename where you have your markdown. **Again, note that these methods are optional, but providing a download link and embedding a PDF of your report is required.**
 
 If you do want to use `md_make.py`, you should first install mistune:
+```
     sudo apt-get install python3-pip
     sudo pip3 install mistune
+```
 
 If you want to make your report fancier you can also modify md_mark.py with [custom options](http://www.discoversdk.com/blog/custom-markdown-parsing-with-mistune-and-python), and if you want to generate a pdf from markdown you can install pandoc and run
+```
     pandoc lab_report.md -o lab_report.pdf
+```
 
 The website template also supports $\LaTeX$ via mathjax (this is a script at the beginning of the html lab files)! For inline math use single dollar signs and for multiline math use use double dollar signs like this:
 
