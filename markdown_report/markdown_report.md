@@ -136,10 +136,3 @@ def do_something_productive():
     cry()
 }
 ```
-
-### Block Quotes
-
-Try using blockquotes!   
-> Blockquotes are very handy in email to emulate reply text.
-> This line is part of the same quote.   
-We are done with that now   
