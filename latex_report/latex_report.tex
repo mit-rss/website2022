@@ -1,0 +1,164 @@
+\documentclass{article}
+
+\usepackage{siunitx} % Provides the \SI{}{} and \si{} command for typesetting SI units
+
+\usepackage{graphicx} % Required for the inclusion of images
+
+\usepackage{tabularx} % Tables
+
+\usepackage{natbib} % Required to change bibliography style to APA
+
+\usepackage{amsmath} % Required for some math elements
+
+% Many options for pseudocode
+\usepackage{algorithm2e}
+\usepackage{algorithmic}
+
+\usepackage{listings} % Python code blocks
+
+\setlength\parindent{0pt} % Removes all indentation from paragraphs
+
+\title{Lab \# Report: Title} % Title
+
+\author{Team \# \\\\ Team Member \\ Team Member \\ Team Member \\ Team Member \\ Team Member \\\\ Class} % Team # + Names, Class (RSS)
+
+\date{\today} % Date for the report
+
+\begin{document}
+
+\maketitle
+
+(no more than 4500 words total, not including Lessons Learned; each team member should contribute approximately equal amounts to the writing of this report)\\
+
+\textbf{Audience}\\\\
+RSS faculty and staff, hypothetical managers, and professionals in the field (including your potential employers).\\
+
+\textbf{Purpose}\\\\
+Write a persuasive argument demonstrating to faculty that you understand the Lab content and how it fits into the context of the class, and that the algorithmic solution you designed is sound and works well in experiments or simulations.  Make claims for your work, supported by detailed technical explanation, justification, and experimental analysis that would be persuasive to a hypothetical manager unfamiliar with the Lab.\\
+
+\textbf{Rubric}\\\\
+See “Rubric for reports” on Canvas (Modules section).\\
+
+\textbf{Visuals}\\\\
+All visual support (graphs, charts, images, clips, tables, etc.) must be numbered, titled, captioned, and cross-referenced in-text. See the "Formatting examples for figures, pseudocode, etc" section below for examples on how to do this using LaTeX.\\
+
+\textbf{Style}\\\\
+You can modify your report to make it visually compelling, bearing in mind that ease of reading is a paramount consideration.\\
+
+\textbf{Other}\\\\
+Label each section with the author’s name.\\\\
+Technical grades will be team-based; CI grades will be individual.\\\\
+You may peer review each other’s sections for the purpose of learning from each other.\\\\
+The report as a whole should be edited for consistency and clarity; the editor’s name should appear at the top, and editing tasks should be shared over all the Reports.\\
+
+\textbf{Required Sections}\\\\
+Use the outline of numbered sections below, not including the one on formatting examples - if using LaTeX, you can make a copy of this .tex document and fill in the blanks.
+
+\section{Introduction}
+Motivates and contextualizes this lab’s goals (i.e., identifies \textbf{what} you have designed in this lab and \textbf{how} that fits among the other RSS labs or how it contributes to developing an autonomous system). Presents an overview of the \textbf{purpose} and \textbf{specifications} of this lab. Provides a short and informal summary of the \textbf{technical problem} and introduces a bird’s-eye view of your technical solution.\\\\
+(no more than 500 words)
+
+\section{Technical Approach}
+Formally presents the \textbf{technical problem} you have to solve in the lab.\\\\
+Describes your team’s \textbf{initial set-up}, \textbf{technical approach}, and \textbf{ROS implementation}. Discusses the different building blocks of your technical approach.\\\\
+Introduces required mathematical symbols and reports key mathematical relations to present the approach.\\\\
+In addition to reporting on the \textbf{technical solution} you devised in response to the technical problem posted in this lab, this section explains the \textbf{how} of your approach, and should \textbf{justify} your team’s design choices and the rationale behind any tradeoffs. (Why these and not other choices?)\\\\
+Any subsection must be numbered and start with a high-level overview that orients the reader.\\\\
+Finally, remember to use figures to help the reader understand your approach.\\\\
+(no more than 2250 words)
+
+\section{Experimental Evaluation}
+The purpose of this section is to \textbf{provide evidence of the functionality} of your design, and to \textbf{document your experimental evaluation}. The section should explain both:
+
+\begin{enumerate}
+\begin{item}
+\textbf{what} was tested and \textbf{why}, and \textbf{how} those tests were performed (Technical Procedures, including a clear definition of the performance metrics used in the analysis),
+\end{item}
+\begin{item}
+and \textbf{discuss the result} of those tests to arrive at an assessment of the functionalities you implemented in this lab (Results).
+\end{item}
+\end{enumerate}
+
+\textbf{You can find ideas and suggestions in the “Good Experimental Evaluation” Recitation on Canvas (Modules section).}\\\\
+(no more than 1250 words)
+
+\section{Conclusion}
+Summarizes what you have achieved in this design phase, and notes any work that has yet to be done to complete this phase successfully, before moving on to the next. May make a nod to the next design phase.\\\\
+(no more than 500 words)
+
+\section{Lessons Learned}
+Presents individually authored self-reflections on technical, communication, and collaboration lessons you have learned in the course of this lab.
+
+\section{Formatting examples for figures, pseudocode, etc}
+
+\subsection{Tables}
+
+Many other table packages and options exist but here is one example:\\\\
+
+\begin{tabularx}{0.8\textwidth} {
+  | >{\raggedright\arraybackslash}X
+  | >{\centering\arraybackslash}X
+  | >{\raggedleft\arraybackslash}X | }
+ \hline
+ item 11 & item 12 & item 13 \\
+ \hline
+ item 21  & item 22  & item 23  \\
+\hline
+\end{tabularx}
+
+\subsection{Images}
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=0.65\textwidth]{placeholder} % Include the image placeholder.png
+\caption{Figure caption.}
+\end{center}
+\end{figure}
+
+\subsection{Code Blocks and Algorithm Pseudocode}
+
+% Including Python code blocks:
+
+\begin{lstlisting}
+json
+{
+  "6.141": "normal",
+  "16.405": "woke",
+  "no_sleep": "spoke"
+}
+
+def do_something_productive():
+  if not_productive:
+    do_work()
+  else:
+    cry()
+\end{lstlisting}
+
+% Using the algorithm2e package for pseudocode:
+
+\begin{algorithm}[H]
+\SetAlgoLined
+ \While{alive}{
+  \eIf{sleepy}{
+   sleep\;
+   }{
+   eat\;
+  }
+ }
+ \caption{caption}
+\end{algorithm}
+
+% Using the algorithmic package for pseudocode:
+
+\begin{algorithmic}
+\STATE $i\gets 10$
+\IF {$i\geq 5$}
+        \STATE $i\gets i-1$
+\ELSE
+        \IF {$i\leq 3$}
+                \STATE $i\gets i+2$
+        \ENDIF
+\ENDIF
+\end{algorithmic}
+
+\end{document}
