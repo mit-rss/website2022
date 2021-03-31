@@ -23,11 +23,13 @@ Then fork this repo into your organization, and rename the repo to just `website
 
 Now in order to modify the template, clone your fork and read on to the next section.
 
-## Using the template
+## Using the template for lab reports
+
+**You must follow the instructions given in `/latex_report/latex_report.pdf` for your lab reports. This document outlines the expectations for the reports as well as an outline the required sections.**
 
 The template has a home page written in html at `/index.html`. It also has a labs page at `/labs/index.html`. You will add folders for each of your labs inside the `/labs` folder, and each one will need to have a corresponding `index.html` file as well as any supporting files (images, etc.). You can take a look at the `/labs/example_lab` section. There are several options for how to generate your lab report as a PDF, but at minimum you must provide links to your briefing slides and a download of your report in PDF format, as well as embedding the slides and report as shown in `/labs/example_lab/index.html`.
 
-One simple way to generate this PDF would be to use a LaTeX tool such as [Overleaf](https://www.overleaf.com/) (think google docs for LaTeX) to collaborate with your team. An example starter `.tex` file is provided in `/latex_example/latex_example.tex`, but note that this is not an RSS-specific report template and just given as a LaTeX formatting example.
+One simple way to generate this PDF would be to use a LaTeX tool such as [Overleaf](https://www.overleaf.com/) (think google docs for LaTeX) to collaborate with your team. You can use the file `/latex_report/latex_report.tex` as a starter template - it was used to produce the lab report instructions at `/latex_report/latex_report.pdf` if you want to see how the corresponding LaTeX code renders in a PDF. It also has examples of how to create elements like tables, figures, pseudocode, and code blocks in LaTeX.
 
 To view local changes that are made to your website repo on github pages, commit them and refresh the page. You might need to do a hard refresh depending on your browser / cookie settings.
 
@@ -44,10 +46,12 @@ If you do want to use `md_make.py`, you should first install mistune:
 If you want to make your report fancier you can also modify md_mark.py with [custom options](http://www.discoversdk.com/blog/custom-markdown-parsing-with-mistune-and-python), and if you want to generate a pdf from markdown you can install pandoc and run
     pandoc lab_report.md -o lab_report.pdf
 
-The template also supports $\LaTeX$ via mathjax (this is a script at the beginning of the html lab files)! For inline math use single dollar signs and for multiline math use use double dollar signs like this:
+The website template also supports $\LaTeX$ via mathjax (this is a script at the beginning of the html lab files)! For inline math use single dollar signs and for multiline math use use double dollar signs like this:
 
 $$
 \begin{align}
   e^{i\pi} + 1 = 0
 \end{align}
 $$
+
+If you want to use markdown, you can use the file `markdown_report/markdown_report.md` as a starter template - it has examples of headers and text formatting as well as how to create elements like tables, figures, and code blocks in markdown.
