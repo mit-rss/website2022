@@ -25,7 +25,7 @@ Now in order to modify the template, clone your fork and read on to the next sec
 
 ## Using the template for lab reports
 
-**You must follow the instructions given in `/latex_report/latex_report.pdf` for your lab reports. This document outlines the expectations for the reports as well as an outline the required sections.**
+**You must follow the instructions given in `/latex_report/latex_report.pdf` for your lab reports. This document outlines the expectations for the reports as well as an outline of the required sections.**
 
 The template has a home page written in html at `/index.html`. It also has a labs page at `/labs/index.html`. You will add folders for each of your labs inside the `/labs` folder, and each one will need to have a corresponding `index.html` file as well as any supporting files (images, etc.). You can take a look at the `/labs/example_lab` section. There are several options for how to generate your lab report as a PDF, but at minimum you must provide links to your briefing slides and a download of your report in PDF format, as well as embedding the slides and report as shown in `/labs/example_lab/index.html`.
 
