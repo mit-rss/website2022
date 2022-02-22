@@ -15,7 +15,7 @@ And finally **don't add too much javascript/bloat**. We're going to need to go t
 ## Setting up the template
 
 You will be hosting this template using [github pages](https://pages.github.com/).
-If you haven't already done so, have your team make an organization on [github.com](github.com). Make sure your organization is named ```rss2022-#``` where "#" is your team number (not your car number!). Do not pad the number with zeros.
+If you haven't already done so, have your team make an organization on [github.com](https://github.com). Make sure your organization is named ```rss2022-#``` where "#" is your team number (not your car number!). Do not pad the number with zeros.
 
 Then fork this repo into your organization, and rename the repo to just `website`. In the settings page of the forked repo scroll down to the "Github Pages" section. Under "Source", click the dropdown menu and select "master branch" then hit save. You should now be able to see the template if you navigate to:
 
