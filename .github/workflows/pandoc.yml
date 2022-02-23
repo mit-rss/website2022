@@ -23,14 +23,14 @@ jobs:
         steps:
             - name: Create directory
               env:
-                  DIR_NAME: $(basename -s .md ${{matrix.file}})
+                  DIR_NAME: "$(basename -s .md ${{matrix.file}})"
               run: |
                 mkdir -p generated/pdfs/$DIR_NAME
                 mkdir -p generated/html/$DIR_NAME
             - name: Convert mk to pdf
               uses: docker://pandoc/latex:2.17
               env:
-                  OUTPUT_NAME: $(basename -s .md ${{matrix.file}})
+                  OUTPUT_NAME: "$(basename -s .md ${{matrix.file}})"
               with:
                   args: >-
                       ${{ matrix.file }}
