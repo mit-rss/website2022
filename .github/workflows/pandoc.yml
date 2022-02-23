@@ -32,7 +32,8 @@ jobs:
               env:
                   OUTPUT_NAME: $(basename -s .md ${{matrix.file}})
               with:
-                  args: > ${{ matrix.file }}
+                  args: >-
+                      ${{ matrix.file }}
                       -f markdown
                       -t pdf
                       -s
@@ -40,7 +41,8 @@ jobs:
             - name: Convert mk to html
               uses: docker://pandoc/latex:2.17
               with:
-                  args: >-
+                  args: > 
+                      ${{ matrix.file }}
                       -f markdown
                       -t html
                       --mathml
