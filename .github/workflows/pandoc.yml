@@ -22,6 +22,7 @@ jobs:
             matrix:
                 file: ${{fromJson(needs.setup.outputs.matrix)}}
         steps:
+            - uses: actions/checkout@v2
             - name: Setup env vars
               run: |
                 echo "OUTPUT=$(basename -s .md ${{matrix.file}})" >> $GITHUB_ENV
