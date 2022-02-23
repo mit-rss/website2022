@@ -12,7 +12,6 @@ jobs:
             - name: create file list
               id: files_list
               run: |
-                mkdir -p labs/pdfs
                 cd reports
                 echo "::set-output name=files::[$(printf '"%s", ' *.md)]"
     convert_to_pandoc:
@@ -26,8 +25,9 @@ jobs:
             - name: Setup env vars
               run: |
                 echo "OUTPUT=$(basename -s .md ${{matrix.file}})" >> $GITHUB_ENV
-            - name: Create directory
+            - name: Create directories
               run: |
+                rm -R generated
                 mkdir -p generated/pdfs/$OUTPUT
                 mkdir -p generated/html/$OUTPUT
             - name: Convert mk to pdf
@@ -38,7 +38,7 @@ jobs:
                       -f markdown
                       -t pdf
                       -s
-                      --output=generated/pdfs/${{env.OUTPUT}}/${{env.OUTPUT}}.pdf
+                      --output=generated/html/${{env.OUTPUT}}/${{env.OUTPUT}}.pdf
             - name: Convert mk to html
               uses: docker://pandoc/latex:2.17
               with:
