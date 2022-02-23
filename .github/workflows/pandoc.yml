@@ -21,33 +21,32 @@ jobs:
             matrix:
                 file: ${{fromJson(needs.setup.outputs.matrix)}}
         steps:
-            - name: Create directory
-              env:
-                  DIR_NAME: "$(basename -s .md ${{matrix.file}})"
+            - name: Setup env vars
               run: |
-                mkdir -p generated/pdfs/$DIR_NAME
-                mkdir -p generated/html/$DIR_NAME
+                echo "::set-env name=OUTPUT::$(basename -s .md ${{matrix.file}})"
+            - name: Create directory
+              run: |
+                mkdir -p generated/pdfs/$OUTPUT
+                mkdir -p generated/html/$OUTPUT
             - name: Convert mk to pdf
               uses: docker://pandoc/latex:2.17
-              env:
-                  OUTPUT_NAME: "$(basename -s .md ${{matrix.file}})"
               with:
-                  args: >-
+                  args: >
                       ${{ matrix.file }}
                       -f markdown
                       -t pdf
                       -s
-                      -o generated/pdfs/$OUTPUT_NAME/$OUTPUT_NAME.pdf
+                      -o generated/pdfs/$OUTPUT/$OUTPUT.pdf
             - name: Convert mk to html
               uses: docker://pandoc/latex:2.17
               with:
-                  args: > 
+                  args: >
                       ${{ matrix.file }}
                       -f markdown
                       -t html
                       --mathml
                       -s
-                      -o generated/pdfs/$OUTPUT_NAME/$OUTPUT_NAME.pdf
+                      -o generated/pdfs/$OUTPUT/$OUTPUT.html
             - name: Push to repo
               run: |
                 git config user.name "github-actions[bot]"
