@@ -1,0 +1,58 @@
+name: Pandoc Conversion
+
+on: push
+
+jobs:
+    setup:
+        runs-on: ubuntu-18.04
+        outputs:
+            matrix: ${{ steps.files_list.outputs.files }}
+        steps:
+            - uses: actions/checkout@v2
+            - name: create file list
+              id: files_list
+              run: |
+                mkdir -p labs/pdfs
+                echo "::set-output name=files::[$(printf '"%s", ' reports/*.md)]"
+    convert_to_pandoc:
+        needs: [ setup ]
+        runs-on: ubuntu-18.04
+        strategy:
+            matrix:
+                file: ${{fromJson(needs.setup.outputs.matrix)}}
+        steps:
+            - name: Create directory
+              env:
+                  DIR_NAME: $(basename -s .md ${{matrix.file}})
+              run: |
+                mkdir -p generated/pdfs/$DIR_NAME
+                mkdir -p generated/html/$DIR_NAME
+            - name: Convert mk to pdf
+              uses: docker://pandoc/latex:2.17
+              env:
+                  OUTPUT_NAME: $(basename -s .md ${{matrix.file}})
+              with:
+                  args: > ${{ matrix.file }}
+                    -f markdown
+                    -t pdf
+                    -s
+                    -o generated/pdfs/$OUTPUT_NAME/$OUTPUT_NAME.pdf
+            - name: Convert mk to html
+              uses: docker://pandoc/latex:2.17
+              with:
+                  args: >-
+                  -f markdown
+                  -t html
+                  --mathml
+                  -s
+                  -o generated/pdfs/$OUTPUT_NAME/$OUTPUT_NAME.pdf
+            - name: Push to repo
+              run: |
+                git config user.name "github-actions[bot]"
+                git config user.email "github-actions[bot]@users.noreply.github.com"
+                
+                git add generated/
+                git commit -m "Push generated pdfs/html"
+                git push
+                    
+                    
