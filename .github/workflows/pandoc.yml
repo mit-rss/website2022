@@ -33,19 +33,19 @@ jobs:
                   OUTPUT_NAME: $(basename -s .md ${{matrix.file}})
               with:
                   args: > ${{ matrix.file }}
-                    -f markdown
-                    -t pdf
-                    -s
-                    -o generated/pdfs/$OUTPUT_NAME/$OUTPUT_NAME.pdf
+                      -f markdown
+                      -t pdf
+                      -s
+                      -o generated/pdfs/$OUTPUT_NAME/$OUTPUT_NAME.pdf
             - name: Convert mk to html
               uses: docker://pandoc/latex:2.17
               with:
                   args: >-
-                  -f markdown
-                  -t html
-                  --mathml
-                  -s
-                  -o generated/pdfs/$OUTPUT_NAME/$OUTPUT_NAME.pdf
+                      -f markdown
+                      -t html
+                      --mathml
+                      -s
+                      -o generated/pdfs/$OUTPUT_NAME/$OUTPUT_NAME.pdf
             - name: Push to repo
               run: |
                 git config user.name "github-actions[bot]"
