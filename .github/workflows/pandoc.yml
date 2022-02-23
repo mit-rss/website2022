@@ -28,8 +28,8 @@ jobs:
             - name: Create directories
               run: |
                 rm -R generated
-                mkdir -p generated/pdfs/$OUTPUT
-                mkdir -p generated/html/$OUTPUT
+                mkdir -p generated/pdfs/
+                mkdir -p generated/html/
             - name: Convert mk to pdf
               uses: docker://pandoc/latex:2.17
               with:
@@ -38,7 +38,7 @@ jobs:
                       -f markdown
                       -t pdf
                       -s
-                      --output=generated/pdfs/${{env.OUTPUT}}/${{env.OUTPUT}}.pdf
+                      --output=generated/pdfs/${{env.OUTPUT}}.pdf
             - name: Convert mk to html
               uses: docker://pandoc/latex:2.17
               with:
@@ -48,7 +48,7 @@ jobs:
                       -t html
                       --mathml
                       -s
-                      --output=generated/html/${{env.OUTPUT}}/${{env.OUTPUT}}.html
+                      --output=generated/html/${{env.OUTPUT}}.html
             - name: Push to repo
               run: |
                 git config user.name "github-actions[bot]"
