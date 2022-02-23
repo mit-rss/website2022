@@ -1,3 +1,7 @@
+---
+title: Test Report
+---
+
 # Test Report
 
 ## First heading
