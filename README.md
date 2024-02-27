@@ -6,7 +6,7 @@ This is a generic template for your team website hosted on github pages.
 
 You can change the template design as much as you want - this website is pretty boring right now. Use pictures, videos, gifs and stories from your RSS experience to make this website pop! There are a couple constraints however. First, your lab reports must remain accessible at these links:
 
-    https://rss2023-[TEAM_NUMBER].github.io/website/labs/[LAB_NUMBER]
+    https://rss2024-[TEAM_NUMBER].github.io/website/labs/[LAB_NUMBER]
 
 Also for the sake of the graders, please make sure that the text remains **black on white**.
 
@@ -15,11 +15,11 @@ And finally **don't add too much javascript/bloat**. We're going to need to go t
 ## Setting up the template
 
 You will be hosting this template using [github pages](https://pages.github.com/).
-If you haven't already done so, have your team make an organization on [github.com](https://github.com). Make sure your organization is named ```rss2023-#``` where "#" is your team number (not your car number!). Do not pad the number with zeros.
+If you haven't already done so, have your team make an organization on [github.com](https://github.com). Make sure your organization is named ```rss2024-#``` where "#" is your team number (not your car number!). Do not pad the number with zeros.
 
 Then fork this repo into your organization, and rename the repo to just `website`. In the settings page of the forked repo scroll down to the "Github Pages" section. Under "Source", click the dropdown menu and select "master branch" then hit save. You should now be able to see the template if you navigate to:
 
-    https://rss2023-[TEAM_NUMBER].github.io/website/
+    https://rss2024-[TEAM_NUMBER].github.io/website/
 
 Now in order to modify the template, clone your fork and read on to the next section.
 
