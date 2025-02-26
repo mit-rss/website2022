@@ -1,0 +1,53 @@
+body,p,h1,h2,h3,h4,h5,h6 {font-family: Palatino Linotype, sans-serif}
+
+body, html {
+  height: 100%;
+  line-height: 1.8;
+}
+
+/* Full height image header */
+.title_img {
+  background-position: center;
+  background-size: cover;
+  background-image: url("./img/mit.jpg");
+  height: 30%;
+  /* max-height: 30%; */
+}
+
+.team_member {
+    width: 20%; /* Change this so you can fit x Team members in a row*/
+    float: left;
+    padding: 0% 6px;
+    min-height: 500px;
+}
+.team_member p {
+  font-size: 10px;
+  font-size: 1.5vw;
+}
+.team_member h4 {
+  font-size: 20px;
+  font-size: 3vw;
+}
+
+.headshot {
+    display: block;
+    margin:auto;
+    max-width: 100%;
+    width: 200px;
+    height: 200px;
+    max-height: 200px;
+    overflow: hidden;
+}
+
+.w3-bar .w3-button {
+  padding: 16px;
+}
+
+.w3-container {
+  width: 100%; /* Adjust as needed */
+  margin: 0 auto; /* Centers the container */
+  display: flex;
+  justify-content: center; /* Centers child elements */
+  gap: 20px; /* Adds space between cards */
+  padding: 0px;
+}
