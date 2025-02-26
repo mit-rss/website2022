@@ -6,7 +6,7 @@
 
 # Lab # Report: Title
 
-(No more than 2500 words total, not including Lessons Learned; each team member should contribute approximately equal amounts to the writing of this report. There will be 30% penalty if the report goes over the word limit.)
+(No more than 2500 words total, not including Lessons Learned; each team member should contribute approximately equal amounts to the writing of this report. **There will be 30% penalty if the report goes over the word limit.**)
 
 ## Requirements
 
