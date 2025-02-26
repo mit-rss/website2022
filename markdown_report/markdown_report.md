@@ -6,7 +6,7 @@
 
 # Lab # Report: Title
 
-(no more than 4500 words total, not including Lessons Learned; each team member should contribute approximately equal amounts to the writing of this report)
+(No more than 2500 words total, not including Lessons Learned; each team member should contribute approximately equal amounts to the writing of this report. There will be 30% penalty if the report goes over the word limit.)
 
 ## Requirements
 
@@ -40,7 +40,7 @@ Use the outline of numbered sections below - if using markdown, you can make a c
 ## 1. Introduction
 Motivates and contextualizes this lab’s goals (i.e., identifies **what** you have designed in this lab and **how** that fits among the other RSS labs or how it contributes to developing an autonomous system). Presents an overview of the **purpose** and **specifications** of this lab. Provides a short and informal summary of the **technical problem** and introduces a bird’s-eye view of your technical solution.
 
-(no more than 500 words)
+(approx 250 words)
 
 ## 2. Technical Approach
 Formally presents the **technical problem** you have to solve in the lab.
@@ -55,7 +55,7 @@ Any subsection must be numbered and start with a high-level overview that orient
 
 Finally, remember to use figures to help the reader understand your approach.
 
-(no more than 2250 words)
+(approx 1250 words)
 
 ## 3. Experimental Evaluation
 The purpose of this section is to **provide evidence of the functionality** of your design, and to **document your experimental evaluation**. The section should explain both:
@@ -64,12 +64,12 @@ The purpose of this section is to **provide evidence of the functionality** of y
 
 **You can find ideas and suggestions in the “Good Experimental Evaluation” Recitation on Canvas (Modules section).**
 
-(no more than 1250 words)
+(approx 750 words)
 
 ## 4. Conclusion
 Summarizes what you have achieved in this design phase, and notes any work that has yet to be done to complete this phase successfully, before moving on to the next. May make a nod to the next design phase.
 
-(no more than 500 words)
+(approx 250 words)
 
 ## 5. Lessons Learned
 Presents individually authored self-reflections on technical, communication, and collaboration lessons you have learned in the course of this lab.
