@@ -5,38 +5,131 @@ body, html {
   line-height: 1.8;
 }
 
+.w3-top a:hover{
+  background-color: #B6CCFE !important;
+}
+.w3-sidebar a:hover{
+  background-color: #ABC4FF !important;
+}
+
 /* Full height image header */
 .title_img {
-  background-position: center;
+  display: flex;
+  flex-direction: column;
+  background-attachment: fixed;
+  background-position: center -150px;
   background-size: cover;
   background-image: url("./img/mit.jpg");
-  height: 30%;
+  justify-content: space-between;
+  align-items: center;
+  height: 50vh;
+  position: relative;
+
   /* max-height: 30%; */
 }
-
-.team_member {
-    width: 20%; /* Change this so you can fit x Team members in a row*/
-    float: left;
-    padding: 0% 6px;
-    min-height: 500px;
+.title_img h1 {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 7vw;
+  color: white;
 }
-.team_member p {
-  font-size: 10px;
-  font-size: 1.5vw;
+.title_img button {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 24%;
+  padding: 3px;
+  border-radius: 15px;
+  background-color: #ABC4FF;
+  border-width: 0;
+  font-size: 1.2vw;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+.title_img button:hover {
+  opacity: 1;
+  cursor: pointer;
+  animation: rainbow 3s ease infinite;
+}
+
+@keyframes rainbow {
+  0% { color: red; }
+  14% { color: orange; }
+  28% { color: yellow; }
+  42% { color: green; }
+  57% { color: blue; }
+  71% { color: indigo; }
+  85% { color: violet; }
+  100% { color: red; }
+}
+
+.team_container {
+  background-color: #E2EAFC;
+  width: 100%; /* Adjust as needed */
+  display: flex;
+  flex-direction: row;
+  gap: 4%;
+  padding: 4%;
+}
+.team_member {
+  display: block;
+  width: 100%;
+  padding: 1%;
+  border-radius: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  /* min-height: 500px; */
+}
+.team_member img {
+  width: 90%;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  object-fit: cover;
+  /* width: 200px; */
+  /* height: 200px; */
+  /* max-height: 200px; */
 }
 .team_member h4 {
-  font-size: 20px;
-  font-size: 3vw;
+  margin: 0;
+  /* font-size: 18px; */
+  font-size: 2.5vw;
+}
+.team_member p {
+  /* font-size: 10px; */
+  font-size: 1.5vw;
+}
+.team_member:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background-color: #C1D3FE;
 }
 
-.headshot {
-    display: block;
-    margin:auto;
-    max-width: 100%;
-    width: 200px;
-    height: 200px;
-    max-height: 200px;
-    overflow: hidden;
+.contact_container {
+  background-color: #B6CCFE;
+  width: 100%; /* Adjust as needed */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  gap: 4%;
+  padding: 4%;
+  text-align: center;
+}
+.contact_container .card {
+  border-radius: 10px;
+  min-height: 200px;
+  padding: 2%;
+}
+.contact_container h1 {
+  margin: 0;
+  /* font-size: 18px; */
+  font-size: 4.5vw;
+}
+.contact_container p {
+  font-size: 1.5vw;
 }
 
 .w3-bar .w3-button {
@@ -45,9 +138,9 @@ body, html {
 
 .w3-container {
   width: 100%; /* Adjust as needed */
-  margin: 0 auto; /* Centers the container */
+  margin: auto; /* Centers the container */
   display: flex;
-  justify-content: center; /* Centers child elements */
-  gap: 20px; /* Adds space between cards */
-  padding: 0px;
+  justify-content: space-evenly; /* Centers child elements */
+  gap: 5%;
+  padding: 5% 0;
 }

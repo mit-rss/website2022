@@ -6,20 +6,20 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="styles.css" />
+<link rel="stylesheet" href="styles.css">
 
 <body>
 <!-- If you change something in the Navbar you have to change it on each page (sit on top) -->
 <!-- MAKE SURE YOU GET THE RELATIVE PATHS RIGHT FOR THE NAV BAR!!!!-->
 <div class="w3-top">
-  <div class="w3-bar w3-white w3-card" id="myNavbar">
-    <a href="#home" class="w3-bar-item w3-button w3-wide">RSS Team 12</a>
+  <div class="w3-bar w3-card" style="background-color: #E2EAFC" id="myNavbar">
+    <a href="#home" class="w3-bar-item w3-button w3-wide team-name">RSS Team 12</a>
     <!-- Right-sided navbar links -->
     <div class="w3-right w3-hide-small">
       <a href="#about" class="w3-bar-item w3-button">About</a>
-      <a href="labs/" class="w3-bar-item w3-button"><i class="fa fa-folder"></i>Labs</a>
-      <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="w3-bar-item w3-button"><i class="fa fa-camera"></i>Videos</a>
-      <a href="https://github.com/mit-rss" class="w3-bar-item w3-button"><i class="fa fa-github-square"></i>Github</a>
+      <a href="labs/" class="w3-bar-item w3-button"><i class="fa fa-folder"></i> Labs</a>
+      <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="w3-bar-item w3-button"><i class="fa fa-camera"></i> Videos</a>
+      <a href="https://github.com/mit-rss" class="w3-bar-item w3-button"><i class="fa fa-github-square"></i> Github</a>
     </div>
     <!-- Hide right-floated links on small screens and replace them with a menu icon -->
 
@@ -31,85 +31,90 @@
 
 
 <!-- Sidebar on small screens when clicking the menu icon -->
-<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
-  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close X</a>
-  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">About</a>
-  <a href="labs/" onclick="w3_close()" class="w3-bar-item w3-button">Labs</a>
-  <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" onclick="w3_close()" class="w3-bar-item w3-button">Videos</a>
-  <a href="https://github.com/mit-rss" onclick="w3_close()" class="w3-bar-item w3-button">Github</a>
+<nav class="w3-sidebar w3-bar-block w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none; width: 30%; background-color: #5E60CE; color: white" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16"><i class="fa fa-times-circle-o"></i> Close</a>
+  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button"><i class="fa fa-users"> </i> About</a>
+  <a href="labs/" onclick="w3_close()" class="w3-bar-item w3-button"><i class="fa fa-folder"></i> Labs</a>
+  <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" onclick="w3_close()" class="w3-bar-item w3-button"><i class="fa fa-camera"></i> Videos</a>
+  <a href="https://github.com/mit-rss" onclick="w3_close()" class="w3-bar-item w3-button"><i class="fa fa-github-square"></i> Github</a>
 </nav>
 <!-- End of repeated content on each page-->
 
 
 <!-- Header with full-height image -->
-<header class="title_img w3-display-container w3-grayscale-min" id="home">
-  <div class="w3-display-bottommiddle w3-text-white w3-center">
-    <h1>Team 12!</h1>
-    <p><a href="https://youtu.be/xLZU6TcSmRo" style="width:100%" class="w3-button w3-white w3-opacity w3-hover-opacity-off">
-        Innovation starts somewhere, so why not let it start here?
-    </a></p>
-  </div>
+<header class="title_img" id="home">
+  <h1>Team 12</h1>
+  <button onclick="location.href='https://www.youtube.com/watch?v=IUKls-_dvRY'" type="button">
+    Quit... don't quit. Noodles... don't noodles.
+  </button>
 </header>
 
-<div class="w3-container w3-white" style="padding:5% 5%">
-  <div class="w3-card team_member">
-      <img class="headshot" src="img/wall_e.jfif">
-      <h4>Adan Abu Naaj</h4>
+<div class="team_container">
+  <div class="team_member">
+      <img src="img/wall_e.jfif">
+      <h4 style="padding-top: 5%">Adan</h4>
+      <h4>Abu Naaj</h4>
       <p>adann@mit.edu</p>
       <p>These are some template bios; fill this in for each of your team members!
       </p>
   </div>
-  <div class="w3-card team_member">
-      <img class="headshot" src="img/r2.jpg">
-      <h4>Dylan Gaillard</h4>
+  <div class="team_member">
+      <img src="img/r2.jpg">
+      <h4 style="padding-top: 5%">Dylan</h4>
+      <h4>Gaillard</h4>
       <p>dylang@mit.edu</p>
       <p>These are some template bios; fill this in for each of your team members!
       </p>
   </div>
-  <div class="w3-card team_member">
-      <img class="headshot" src="img/wall_e.jfif">
-      <h4>Andy Yu</h4>
+  <div class="team_member" onmouseover="swapImage(this, 'img/andy2.jpeg')" onmouseout="swapImage(this, 'img/andy.jpg')">
+      <img src="img/andy.jpg"/>
+      <h4 style="padding-top: 5%">Andy</h4>
+      <h4>Yu</h4>
       <p>andyy455@mit.edu</p>
       <p>Short boy.
       </p>
   </div>
-  <div class="w3-card team_member">
-      <img class="headshot" src="img/r2.jpg">
-      <h4>Amina Luvsanchultem</h4>
+  <div class="team_member">
+      <img src="img/r2.jpg">
+      <h4 style="padding-top: 5%">Amina</h4>
+      <h4>Luvsanchultem</h4>
       <p>aminaluv@mit.edu</p>
       <p>These are some template bios; fill this in for each of your team members!
       </p>
   </div>
 </div>
 
+
 <!-- Contact Section -->
-<div class="w3-container w3-grey" style="padding:5% 5%;text-align:center;" id="about">
-  <div class="w3-card w3-white" style="width:100%">
+<div class="contact_container" id="about">
+  <div class="card" style="width:100%; background-color: #EDF2FB">
     <h1>About Us</h1>
+    <p>Just a bunch of chill guys and girls.</p>
   </div>
-  <div class="w3-cell w3-red" style="width:30%;float:left;min-height: 200px;">
-      <i class="fa fa-folder"></i> <!--Put an image here or something?-->
+  <div class="card" style="width:30%; background-color: #64DFDF">
+      <i class="fa fa-terminal"></i> <!--Put an image here or something?-->
       <p>Do something that is unique here. (You can change this to team values or something?)</p>
   </div>
-  <div class="w3-cell w3-white" style="width:30%;margin-left:5%;float:left;min-height: 200px;">
-      <i class="fa fa-folder"></i><!--Put an image here or something?-->
+  <div class="card" style="width:30%; background-color: #5390D9">
+      <i class="fa fa-code"></i><!--Put an image here or something?-->
       <p>The TAs are not that unique, so we are just writing a lot of filler things here so we look cool.</p>
   </div>
-  <div class="w3-cell w3-blue" style="width:30%;margin-left:5%;float:left;min-height: 200px;">
-      <i class="fa fa-folder"></i><!--Put an image here or something?-->
+  <div class="card" style="width:30%; background-color: #5E60CE">
+      <i class="fa fa-car"></i><!--Put an image here or something?-->
       <p>Si vos es pulchellus frigus hanc: et admonitus in hoc genere digna est. It tristis et non dederint tibi. Benediximus</p>
   </div>
 </div>
-
-
 </body>
 
+
 <!-- Footer -->
-<footer class="w3-center w3-black w3-padding-64">
-  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
-  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+<footer class="w3-center" style="padding: 3%; background-color: #5E60CE;">
+  <a href="#home" class="w3-button" style="background-color: #6930C3; border-radius: 10px; color: white"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  <p style="margin-bottom: 0; color: white">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
 </footer>
 
+
+<script src="main.js"></script>
 <script>
 // Modal Image Gallery
 function onClick(element) {
