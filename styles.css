@@ -53,12 +53,12 @@ body, html {
 .title_img button:hover {
   opacity: 1;
   cursor: pointer;
-  animation: color 3s ease infinite;
+  animation: color 10s ease infinite;
 }
 
 @keyframes color {
   0% { color: #6930C3; }
-  50% { color: #5E60CE; }
+  50% { color: #F72585; }
   100% { color: #6930C3; }
 }
 
