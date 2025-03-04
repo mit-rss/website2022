@@ -3,6 +3,7 @@ body,p,h1,h2,h3,h4,h5,h6 {font-family: Palatino Linotype, sans-serif}
 body, html {
   height: 100%;
   line-height: 1.8;
+  background-color: #E2EAFC;
 }
 
 .w3-top a:hover{
