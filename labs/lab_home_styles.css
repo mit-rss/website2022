@@ -90,6 +90,42 @@ body, html {
     cursor: pointer;
 }
 
+footer {
+  padding: 3%;
+  background-color: #5E60CE;
+}
+footer p {
+  text-align: center;
+  color: white;
+  font-size: 1vw;
+  margin: 0;
+  margin-top: 3.1%;
+}
+footer .buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.buttons button {
+  background-color: #6930C3;
+  padding: clamp(0px, 1.2vw, 7px) clamp(0px, 1.4vw, 8px);
+  width: 30%;
+  max-width: 133px;
+
+  border-radius: 10px;
+  border-width: 0;
+  color: white;
+  font-size: clamp(0px, 3vw, 15px);
+}
+.buttons i {
+  font-size: clamp(0px, 3vw, 15px);
+}
+.buttons button:hover {
+  cursor: pointer;
+  background-color: #B5179E;
+}
+
+
 .w3-bar .w3-button {
   padding: 16px;
 }

@@ -54,7 +54,7 @@
   </div>
 </header> -->
 
-<div class="lab-container">
+<div class="lab-container" id="labs">
   <!-- Example Lab -->
   <div class="lab">
     <img src="img/charles.jpg" alt="Survival" onclick="onClick(this)">
@@ -82,40 +82,46 @@
   </div> -->
   <!-- end the lab section -->
 </div>
-
 </body>
 
+<footer>
+  <div class="buttons">
+    <button onclick="location.href='#labs'"><i class="fa fa-arrow-up" style="margin-right: clamp(0px, 3.5vw, 15px)"></i>To the top</button>
+  </div>
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+</footer>
+
 <!-- Footer -->
-<footer class="w3-center" style="padding: 3%; background-color: #5E60CE;">
+<!-- <footer class="w3-center" style="padding: 3%; background-color: #5E60CE;">
   <a href="#labs" class="w3-button" style="background-color: #6930C3; border-radius: 10px; color: white"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
   <p style="margin-bottom: 0; color: white">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
-</footer>
+</footer> -->
 
 <script src="../main.js"></script>
 <script>
 // Modal Image Gallery
-function onClick(element) {
-  document.getElementById("img01").src = element.src;
-  document.getElementById("modal01").style.display = "block";
-  var captionText = document.getElementById("caption");
-  captionText.innerHTML = element.alt;
-}
+// function onClick(element) {
+//   document.getElementById("img01").src = element.src;
+//   document.getElementById("modal01").style.display = "block";
+//   var captionText = document.getElementById("caption");
+//   captionText.innerHTML = element.alt;
+// }
 
 // Toggle between showing and hiding the sidebar when clicking the menu icon
-var mySidebar = document.getElementById("mySidebar");
+// var mySidebar = document.getElementById("mySidebar");
 
-function w3_open() {
-  if (mySidebar.style.display === 'block') {
-    mySidebar.style.display = 'none';
-  } else {
-    mySidebar.style.display = 'block';
-  }
-}
+// function w3_open() {
+//   if (mySidebar.style.display === 'block') {
+//     mySidebar.style.display = 'none';
+//   } else {
+//     mySidebar.style.display = 'block';
+//   }
+// }
 
 // Close the sidebar with the close button
-function w3_close() {
-    mySidebar.style.display = "none";
-}
+// function w3_close() {
+//     mySidebar.style.display = "none";
+// }
 </script>
 
 </html>

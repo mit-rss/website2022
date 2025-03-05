@@ -47,48 +47,81 @@ body, html {
     font-size: 2vw;
     color: white;
 }
-.lab-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    width: 100%;
-    padding: 3%;
-    background-color: #E2EAFC;
-}
-.lab-container .lab {
-    display: block;
-    width: 33.33%;
-    /* min-height: 500px; */
-    padding: 1.5%;
+.lab-name {
+  width: 100%;
+  padding: 0;
+  background-color: #C1D3FE;
 
-    text-align: center;
-    border-radius: 10px;
-    background-color: #C1D3FE;
-    transition: all 0.3s ease;
+  text-align: center;
 }
-.lab img {
-    margin: 0;
-    border-radius: 10px;
-    width: 100%;
+.lab-name h1{
+  margin: 0;
+
+  font-size: 3.5vw;
 }
-.lab a {
-    text-decoration: none;
+.lab-content {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 2%;
+  background-color: #E2EAFC;
+
+  text-align: center;
 }
-.lab h3 {
-    text-decoration: underline;
-    font-size: 3vw;
+.lab-content h1 {
+  margin-top: 0;
+  font-size: 3.5vw;
 }
-.lab p {
-    font-size: 2vw;
+.lab-content p {
+  font-size: 1.5vw;
 }
-.lab:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+.lab-content hr {
+  border: 1px solid #ABC4FF;
+  border-radius: 5px;
 }
-.lab img:hover{
-    opacity: 0.7;
-    cursor: pointer;
+.lab-content iframe {
+  border-radius: 25px;
+  margin-bottom: 1.5%;
 }
+.lab-content object {
+  border-radius: 25px;
+}
+
+footer {
+  padding: 3%;
+  background-color: #5E60CE;
+}
+footer p {
+  text-align: center;
+  color: white;
+  font-size: 1vw;
+  margin: 0;
+  margin-top: 3.1%;
+}
+footer .buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.buttons button {
+  background-color: #6930C3;
+  padding: clamp(0px, 1.2vw, 7px) clamp(0px, 1.4vw, 7px);
+  width: 30%;
+  max-width: 140px;
+
+  border-radius: 10px;
+  border-width: 0;
+  color: white;
+  font-size: clamp(0px, 3vw, 15px);
+}
+.buttons i {
+  font-size: clamp(0px, 3vw, 15px);
+}
+.buttons button:hover {
+  cursor: pointer;
+  background-color: #B5179E;
+}
+
 
 .w3-bar .w3-button {
   padding: 16px;
