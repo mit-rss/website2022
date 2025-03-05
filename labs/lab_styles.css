@@ -3,14 +3,16 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 body, html {
   height: 100%;
   line-height: 1.8;
-  background-color: #E2EAFC;
+  background-color: #FAE0E4;
 }
 
-.w3-top a:hover{
-  background-color: #B6CCFE !important;
+.w3-top a:hover {
+  background-color: #DC2F02 !important;
+  color: white !important;
 }
-.w3-sidebar a:hover{
-  background-color: #ABC4FF !important;
+.w3-sidebar a:hover {
+  background-color: #DC2F02 !important;
+  color: white !important;
 }
 
 /* Full height image header */
@@ -50,7 +52,7 @@ body, html {
 .lab-name {
   width: 100%;
   padding: 0;
-  background-color: #C1D3FE;
+  background-color: #F9BEC7;
 
   text-align: center;
 }
@@ -64,7 +66,7 @@ body, html {
   width: 100%;
   margin: 0;
   padding: 2%;
-  background-color: #E2EAFC;
+  background-color: #FAE0E4;
 
   text-align: center;
 }
@@ -76,7 +78,7 @@ body, html {
   font-size: 1.5vw;
 }
 .lab-content hr {
-  border: 1px solid #ABC4FF;
+  border: 1px solid #E85D04;
   border-radius: 5px;
 }
 .lab-content iframe {
@@ -89,7 +91,7 @@ body, html {
 
 footer {
   padding: 3%;
-  background-color: #5E60CE;
+  background-color: #641220;
 }
 footer p {
   text-align: center;
@@ -104,7 +106,7 @@ footer .buttons {
   justify-content: space-evenly;
 }
 .buttons button {
-  background-color: #6930C3;
+  background-color: #9D0208;
   padding: clamp(0px, 1.2vw, 7px) clamp(0px, 1.4vw, 7px);
   width: 30%;
   max-width: 140px;
@@ -119,7 +121,7 @@ footer .buttons {
 }
 .buttons button:hover {
   cursor: pointer;
-  background-color: #B5179E;
+  background-color: #DC2F02;
 }
 
 

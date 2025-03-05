@@ -3,14 +3,16 @@ body,p,h1,h2,h3,h4,h5,h6 {font-family: Palatino Linotype, sans-serif}
 body, html {
   height: 100%;
   line-height: 1.8;
-  background-color: #E2EAFC;
+  background-color: #FAE0E4;
 }
 
-.w3-top a:hover{
-  background-color: #B6CCFE !important;
+.w3-top a:hover {
+  background-color: #DC2F02 !important;
+  color: white !important;
 }
-.w3-sidebar a:hover{
-  background-color: #ABC4FF !important;
+.w3-sidebar a:hover {
+  background-color: #DC2F02 !important;
+  color: white !important;
 }
 
 /* Full height image header */
@@ -45,7 +47,7 @@ body, html {
   width: 24%;
   padding: 3px;
   border-radius: 15px;
-  background-color: #ABC4FF;
+  background-color: #F9BEC7;
   border-width: 0;
   font-size: 1.2vw;
   opacity: 0.7;
@@ -54,17 +56,17 @@ body, html {
 .title_img button:hover {
   opacity: 1;
   cursor: pointer;
-  animation: color 10s ease infinite;
+  animation: color 5s ease infinite;
 }
 
 @keyframes color {
-  0% { color: #6930C3; }
-  50% { color: #F72585; }
-  100% { color: #6930C3; }
+  0% { color: #9D0208; }
+  50% { color: #E85D04; }
+  100% { color: #9D0208; }
 }
 
 .team_container {
-  background-color: #E2EAFC;
+  background-color: #FAE0E4;
   width: 100%; /* Adjust as needed */
   display: flex;
   flex-direction: row;
@@ -101,11 +103,11 @@ body, html {
 .team_member:hover {
   transform: scale(1.05);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  background-color: #C1D3FE;
+  background-color: #F9BEC7;
 }
 
 .contact_container {
-  background-color: #B6CCFE;
+  background-color: #85182A;
   width: 100%; /* Adjust as needed */
   display: flex;
   flex-direction: row;
@@ -127,10 +129,13 @@ body, html {
 .contact_container p {
   font-size: 1.5vw;
 }
+.contact_container i {
+  font-size: 2vw;
+}
 
 footer {
   padding: 3%;
-  background-color: #5E60CE;
+  background-color: #641220;
 }
 footer p {
   text-align: center;
@@ -145,7 +150,7 @@ footer .buttons {
   justify-content: space-evenly;
 }
 .buttons button {
-  background-color: #6930C3;
+  background-color: #9D0208;
   padding: clamp(0px, 1.2vw, 7px) clamp(0px, 1.4vw, 8px);
   width: 30%;
   max-width: 133px;
@@ -160,7 +165,7 @@ footer .buttons {
 }
 .buttons button:hover {
   cursor: pointer;
-  background-color: #B5179E;
+  background-color: #DC2F02;
 }
 
 .w3-bar .w3-button {
