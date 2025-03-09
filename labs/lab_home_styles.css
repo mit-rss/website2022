@@ -54,16 +54,17 @@ body, html {
     flex-direction: row;
     justify-content: space-evenly;
     width: 100%;
-    padding: 3%;
+    padding: 3% 0;
     background-color: #FAE0E4;
 }
 .lab-container .lab {
     display: block;
-    width: 33.33%;
+    width: 25%;
     /* min-height: 500px; */
     padding: 1.5%;
 
     text-align: center;
+    text-decoration: none;
     border-radius: 10px;
     background-color: #F9BEC7;
     transition: all 0.3s ease;
@@ -73,24 +74,17 @@ body, html {
     border-radius: 10px;
     width: 100%;
 }
-.lab a {
-    text-decoration: none;
-}
 .lab h3 {
-    text-decoration: underline;
     font-size: 3vw;
 }
 .lab p {
     font-size: 2vw;
+    margin: 0;
 }
 .lab:hover {
     transform: scale(1.05);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     background-color: #FBB1BD;
-}
-.lab img:hover{
-    opacity: 0.7;
-    cursor: pointer;
 }
 
 footer {
