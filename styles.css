@@ -70,8 +70,8 @@ body, html {
   width: 100%; /* Adjust as needed */
   display: flex;
   flex-direction: row;
-  gap: 4%;
-  padding: 4%;
+  padding: 1.5% 1%;
+  gap: 1%;
 }
 .team_member {
   display: block;
