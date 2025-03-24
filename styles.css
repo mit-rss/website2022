@@ -1,9 +1,11 @@
-body,p,h1,h2,h3,h4,h5,h6 {font-family: Palatino Linotype, sans-serif}
+body,p,h1,h2,h3,h4,h5,h6 {font-family: Arial, sans-serif, Palatino Linotype}
 
 body, html {
   height: 100%;
+  min-height: 100vh;
+  margin: 0;
   line-height: 1.8;
-  background-color: #FAE0E4;
+  background-color: #ff7e5f;
 }
 
 .w3-top a:hover {
@@ -15,63 +17,163 @@ body, html {
   color: white !important;
 }
 
-/* Full height image header */
-.title_img {
+.navbar {
+  background-color: #85182A; /* Blue background */
+  color: #f9d4cf;
   display: flex;
-  flex-direction: column;
-  background-attachment: fixed;
-  background-position: center -150px;
-  background-size: cover;
-  background-image: url("./img/mit.jpg");
   justify-content: space-between;
   align-items: center;
-  height: 50vh;
-  position: relative;
-
-  /* max-height: 30%; */
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 0;
+  width: 100%;
+  height: 60px;
+  z-index: 1000;
 }
-.title_img h1 {
+.navbar .team-name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  margin: 0;
+  padding: 15px;
+  letter-spacing: 3.5px;
+  text-decoration: none;
+  cursor: pointer;
+}
+.navbar .links {
+  height: 100%;
+  display: flex;
+}
+.navbar .links a{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 12px;
+  text-decoration: none;
+  gap: 5px;
+  cursor: pointer;
+}
+.navbar .menu {
+  display: none;
+  align-items: center;  /* Center vertically */
+  justify-content: center;  /* Center horizontally */
+  padding: 0 12px;  /* Adjust padding if needed */
+  height: 100%;
+  cursor: pointer;
+}
+.navbar .team-name:hover{
+  background-color: #DC2F02;
+}
+.navbar .links a:hover{
+  background-color: #DC2F02;
+}
+.navbar .menu:hover {
+  background-color: #DC2F02;
+}
+
+/* Default Sidebar Styles */
+.sidebar {
+  display: flex; /* Make sidebar visible by default */
+  flex-direction: column;
+  position: fixed;
+  top: -100%;
+  right: 0;
+  background-color: #85182A;
+  width: 20%;
+  border-bottom-left-radius: 15px;
+  color: #f9d4cf;
+  overflow: hidden;
+  z-index: 999;
+  transition: top 0.5s ease-in-out; /* Transition effect */
+}
+
+/* Sidebar Links */
+.sidebar a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  padding: 10px;
+  gap: 5px;
+  font-size: 2.5vw;
+  cursor: pointer;
+}
+
+/* Hover effect */
+.sidebar a:hover {
+  background-color: #DC2F02;
+}
+
+/* Show sidebar when active */
+.sidebar.active {
+  top: 60px;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+  .navbar .menu {
+    display: flex;
+  }
+
+  .navbar .links {
+    display: none;
+  }
+}
+
+/* Full height image header */
+.title {
+  position: relative;
+  height: 100vh;
+}
+.title h1 {
   position: absolute;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
   font-size: 7vw;
-  color: white;
+  margin: 0;
+  display: inline-block;
+
+  color: transparent;
+  background: linear-gradient(
+    115deg,
+    #9D0208 0%,
+    #9D0208 16%,
+    #c20101 21%,
+    #c20101 25%,
+    white 25%,
+    white 26%,
+    transparent 26%
+  );
+  background-size: 800% 200%;
+  background-clip: text;
+  animation: scrollReflection 1s linear forwards;
 }
-.title_img button {
+.title canvas {
   position: absolute;
-  top: 90%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-
-  width: 24%;
-  padding: 3px;
-  border-radius: 15px;
-  background-color: #F9BEC7;
-  border-width: 0;
-  font-size: 1.2vw;
-  opacity: 0.7;
-  transition: opacity 0.3s ease;
+  top: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.0); /* Transparent background */
 }
-.title_img button:hover {
-  opacity: 1;
-  cursor: pointer;
-  animation: color 5s ease infinite;
-}
-
-@keyframes color {
-  0% { color: #9D0208; }
-  50% { color: #E85D04; }
-  100% { color: #9D0208; }
+@keyframes scrollReflection {
+  0% {
+    background-position: 40% 0%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
 }
 
 .team_container {
-  background-color: #FAE0E4;
-  width: 100%; /* Adjust as needed */
+  background-color: #f9d4cf;
+  width: 100%;
   display: flex;
   flex-direction: row;
-  padding: 1.5% 1%;
-  gap: 1%;
+  padding: 3%;
+  gap: 3%;
 }
 .team_member {
   display: block;
@@ -80,31 +182,40 @@ body, html {
   border-radius: 20px;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
-  /* min-height: 500px; */
 }
 .team_member img {
-  width: 90%;
+  width: 85%;
   aspect-ratio: 1/1;
   border-radius: 50%;
   object-fit: cover;
-  /* width: 200px; */
-  /* height: 200px; */
-  /* max-height: 200px; */
 }
 .team_member h4 {
   margin: 0;
-  /* font-size: 18px; */
-  font-size: 2.5vw;
+  font-size: 2vw;
 }
 .team_member p {
-  /* font-size: 10px; */
   font-size: 1.5vw;
 }
 .team_member:hover {
   transform: scale(1.05);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  background-color: #F9BEC7;
+  background-color: #fcafaf;
 }
+
+.about {
+  background-color: #85182A;
+  width: 100%;
+  padding: 3%;
+  color: #f9d4cf;
+}
+.about h1 {
+  margin-top: 0;
+  font-size: 4vw;
+}
+.about p {
+  font-size: 1.5vw;
+}
+
 
 .contact_container {
   background-color: #85182A;
