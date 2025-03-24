@@ -8,17 +8,8 @@ body, html {
   background-color: #ff7e5f;
 }
 
-.w3-top a:hover {
-  background-color: #DC2F02 !important;
-  color: white !important;
-}
-.w3-sidebar a:hover {
-  background-color: #DC2F02 !important;
-  color: white !important;
-}
-
 .navbar {
-  background-color: #85182A; /* Blue background */
+  background-color: #85182A;
   color: #f9d4cf;
   display: flex;
   justify-content: space-between;
@@ -29,6 +20,8 @@ body, html {
   padding: 0;
   width: 100%;
   height: 60px;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
   z-index: 1000;
 }
 .navbar .team-name {
@@ -63,14 +56,24 @@ body, html {
   height: 100%;
   cursor: pointer;
 }
-.navbar .team-name:hover{
+.fade-in {
+  opacity: 0.8;
+}
+.navbar:hover {
+  opacity: 1;
+}
+.navbar .team-name:hover {
   background-color: #DC2F02;
 }
-.navbar .links a:hover{
+.navbar .links a:hover {
   background-color: #DC2F02;
 }
 .navbar .menu:hover {
   background-color: #DC2F02;
+}
+@keyframes fade-in {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
 }
 
 /* Default Sidebar Styles */

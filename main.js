@@ -5,7 +5,7 @@ function swapImage(element, newImgSrc) {
 }
 ////
 
-// Interative Title //
+// Interactive Title //
 const title = document.getElementById('home');
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
@@ -52,7 +52,7 @@ class Shape {
         this.x = x;
         this.y = y;
         this.radius = radius;
-        this.velocity = { x: Math.random() * 10 - 1, y: Math.random() * 10 - 1 };
+        this.velocity = { x: Math.random() * 7 - 1, y: Math.random() * 7 - 1 };
         this.blur = 5; // Blur level
         this.friction = 0.98;
         this.rotation = Math.random() * 2 * Math.PI;
@@ -146,21 +146,12 @@ function animate() {
 window.addEventListener('resize', resizeCanvas);
 ////
 
-// Toggle between showing and hiding the sidebar when clicking the menu icon //
-var mySidebar = document.getElementById("mySidebar");
-
-function w3_open() {
-    if (mySidebar.style.display === 'block') {
-        mySidebar.style.display = 'none';
-    } else {
-        mySidebar.style.display = 'block';
-    }
-}
-
-// Close the sidebar with the close button
-function w3_close() {
-    mySidebar.style.display = "none";
-}
+// Navbar and sidebar
+window.onload = function() {
+    setTimeout(() => {
+        document.querySelector(".navbar").classList.add("fade-in");
+    }, 1000);
+};
 
 const toggleButton = document.querySelector(".menu");
 const closeButton = document.querySelector(".close-sidebar")
