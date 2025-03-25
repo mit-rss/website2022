@@ -10,31 +10,33 @@
 <link rel="icon" href="img/ruby.png" type="image/png">
 
 <body>
-<!-- Repeated content on each page-->
-<div class="navbar">
-  <a class="team-name" href="#home" id="#home">RSS Team 12</a>
-  <a class="menu"><i class="fa fa-bars"></i></a>
-  <div class="links">
+<!-- Repeated header on each page-->
+<div class="navcontainer">
+  <div class="navbar">
+    <a class="team-name" href="#home">RSS Team 12</a>
+    <a class="menu"><i class="fa fa-bars"></i></a>
+    <div class="links">
+      <a href="#home"><i class="fa fa-home"></i>Home</a>
+      <a href="labs/"><i class="fa fa-folder"></i>Labs</a>
+      <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><i class="fa fa-video-camera"></i>Videos</a>
+      <a href="https://github.com/rss2025-12"><i class="fa fa-github-square"></i>Github</a>
+    </div>
+  </div>
+
+  <nav class="sidebar">
     <a href="#home"><i class="fa fa-home"></i>Home</a>
     <a href="labs/"><i class="fa fa-folder"></i>Labs</a>
     <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><i class="fa fa-camera"></i>Videos</a>
     <a href="https://github.com/rss2025-12"><i class="fa fa-github-square"></i>Github</a>
-  </div>
+    <a class="close-sidebar"><i class="fa fa-times-circle-o"></i> Close</a>
+  </nav>
 </div>
-
-<nav class="sidebar">
-  <a href="#home"><i class="fa fa-home"></i>Home</a>
-  <a href="labs/"><i class="fa fa-folder"></i>Labs</a>
-  <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><i class="fa fa-camera"></i>Videos</a>
-  <a href="https://github.com/rss2025-12"><i class="fa fa-github-square"></i>Github</a>
-  <a class="close-sidebar"><i class="fa fa-times-circle-o"></i> Close</a>
-</nav>
 
 <header class="title" id="home">
   <h1>Team 12</h1>
   <canvas id="canvas"></canvas>
 </header>
-<!-- End of repeated content on each page-->
+<!-- End of repeated header on each page-->
 
 <!-- Team members -->
 <div class="team_container">
@@ -59,7 +61,7 @@
       <h4 style="padding-top: 5%">Andy</h4>
       <h4>Yu</h4>
       <p>andyy455@mit.edu</p>
-      <p>6-2 on paper, 5'5" in reality. Sophmore.
+      <p>6-2 on paper, 5'5" in reality. Sophomore.
       </p>
   </div>
   <div class="team_member">
@@ -97,13 +99,17 @@
   </p>
 </div>
 <!-- End of about us -->
-</body>
 
+<!-- Repeated footer on each page-->
 <footer>
   <div class="buttons">
     <button onclick="location.href='#home'"><i class="fa fa-arrow-up" style="margin-right: clamp(0px, 3.5vw, 15px)"></i>To the top</button>
   </div>
+  <p>Ruby logo by Yukihiro Matsumoto and the Ruby Visual Identity Team, used under CC BY-SA 2.5.</p>
 </footer>
+<!-- Repeated footer on each page-->
+</body>
 
 <script src="main.js"></script>
+<script src="interactive.js"></script>
 </html>

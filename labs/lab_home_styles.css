@@ -2,103 +2,233 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 
 body, html {
   height: 100%;
+  min-height: 100vh;
+  margin: 0;
   line-height: 1.8;
-  background-color: #FAE0E4;
+  animation: back-gradient 20s infinite ease-in-out;
+}
+@keyframes back-gradient {
+  0%, 100% {background-color: #D57056;}
+  50% {background-color: #F09083;}
 }
 
-.w3-top a:hover {
-  background-color: #DC2F02 !important;
-  color: white !important;
-}
-.w3-sidebar a:hover {
-  background-color: #DC2F02 !important;
-  color: white !important;
-}
-
-/* Full height image header */
-.title_img {
+/* Repeated header on each page */
+.navbar {
+  background-color: #751A2C;
+  color: #F0AFA5;
   display: flex;
-  flex-direction: column;
-  background-attachment: fixed;
-  background-position: center -150px;
-  background-size: cover;
-  background-image: url("../img/mit.jpg");
   justify-content: space-between;
   align-items: center;
-  height: 50vh;
-  position: relative;
-
-  /* max-height: 30%; */
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 0;
+  width: 100%;
+  height: 60px;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+  z-index: 1000;
 }
-.title_img h1 {
+.navbar .team-name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  margin: 0;
+  padding: 15px;
+  letter-spacing: 3.5px;
+  text-decoration: none;
+  cursor: pointer;
+}
+.navbar .links {
+  height: 100%;
+  display: flex;
+}
+.navbar .links a{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 12px;
+  text-decoration: none;
+  gap: 5px;
+  cursor: pointer;
+}
+.navbar .menu {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 0 12px;
+  height: 100%;
+  cursor: pointer;
+}
+.fade-in {
+  opacity: 1;
+}
+.navbar .team-name:hover {
+  background-color: #B33A3A;
+}
+.navbar .links a:hover {
+  background-color: #B33A3A;
+}
+.navbar .menu:hover {
+  background-color: #B33A3A;
+}
+@keyframes fade-in {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 60px; /* -100%; */
+  right: 0;
+  background-color: #751A2C;
+  width: 20%;
+  color: #F0AFA5;
+  overflow: hidden;
+  transition: opacity 0.4s ease-in-out, top 0.5s ease-in-out, clip-path 0.3s ease-in-out;
+  clip-path: inset(0 0 calc(100% + 3vw) 0 round 0 0 0 15px);
+  z-index: 999;
+}
+.sidebar a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  padding: 10px;
+  gap: 5px;
+  font-size: 2.5vw;
+  cursor: pointer;
+}
+.sidebar a:hover {
+  background-color: #B33A3A;
+}
+.sidebar.active {
+  clip-path: inset(0 0 0 0 round 0 0 0 3vw);
+}
+.navcontainer:hover .navbar,
+.navcontainer:hover .sidebar {
+    opacity: 1;
+}
+
+@media (max-width: 600px) {
+  .navbar .menu {
+    display: flex;
+  }
+  .navbar .links {
+    display: none;
+  }
+}
+/* End of repeated header on each page */
+
+/* Title */
+.title {
+  position: relative;
+  height: 40vh;
+}
+.title h1 {
   position: absolute;
+  top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
   font-size: 7vw;
-  color: white;
+  margin: 0;
+  display: inline-block;
+  animation: title-text 1.3s forwards ease-in-out;
 }
-.title_img p {
-  position: absolute;
-  top: 80%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+@keyframes title-text {
+  0% {
+    color: #DC2F02;
+    opacity: 0;
+  }
+  70% {
+    color: #DC2F02;
+    text-shadow:
+      5px 5px 10px white,
+      5px 5px 20px white,
+      5px 5px 30px white;
+  }
+  100% {
+    color: #9D0208;
+    opacity: 1;}
+}
+/* End of title */
 
-  width: 50%;
-  text-align: center;
-  font-size: 2vw;
-  color: white;
+/* Labs */
+.labs {
+  min-height: 390px;
+  background-color: #F0AFA5;
 }
 .lab-container {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   width: 100%;
-  padding: 3% 0;
-  background-color: #FAE0E4;
+  padding: 3%;
+  gap: 3%;
 }
 .lab-container .lab {
-  display: block;
-  width: 25%;
-  /* min-height: 500px; */
-  padding: 1.5%;
-
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  background-color: #F09083;
+  text-align: left;
   text-decoration: none;
-  border-radius: 10px;
-  background-color: #F9BEC7;
+  border-radius: 2vw;
+  overflow: hidden;
   transition: all 0.3s ease;
 }
-.lab img {
+.lab a {
+  padding: 0;
   margin: 0;
-  border-radius: 10px;
-  min-height: 40%;
-  max-height: 40%;
-  width: 100%;
 }
 .lab h3 {
-  font-size: 2.5vw;
+  margin: 0;
+  padding: 0 3%;
+  padding-top: 1.5%;
+  font-size: 2vw;
+  transition: all 0.3s ease-in-out;
 }
 .lab p {
-  font-size: 2vw;
   margin: 0;
+  padding: 0 3%;
+  padding-bottom: 1%;
+  font-size: 1vw;
+  transition: all 0.3s ease-in-out;
+}
+.lab img {
+  margin-top: auto;
+  width: 100%;
+  max-height: 15vw;
+  object-fit: cover;
 }
 .lab:hover {
   transform: scale(1.05);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  background-color: #FBB1BD;
+  background-color: #751A2C;
 }
 .lab:hover h3 {
-  text-decoration: underline;
+  font-weight: bold;
+  color: #F09083;
 }
+.lab:hover p {
+  color: #F09083;
+}
+/* End of labs */
 
+/* Repeated footer on each page */
 footer {
   padding: 3%;
-  background-color: #641220;
+  background-color: #251421;
 }
 footer p {
   text-align: center;
-  color: white;
+  color: #F0AFA5;
   font-size: 1vw;
   margin: 0;
   margin-top: 3.1%;
@@ -109,14 +239,14 @@ footer .buttons {
   justify-content: space-evenly;
 }
 .buttons button {
-  background-color: #9D0208;
+  background-color: #751A2C;
   padding: clamp(0px, 1.2vw, 7px) clamp(0px, 1.4vw, 8px);
   width: 30%;
   max-width: 133px;
 
   border-radius: 10px;
   border-width: 0;
-  color: white;
+  color: #F0AFA5;
   font-size: clamp(0px, 3vw, 15px);
 }
 .buttons i {
@@ -124,19 +254,6 @@ footer .buttons {
 }
 .buttons button:hover {
   cursor: pointer;
-  background-color: #DC2F02;
+  background-color: #B33A3A;
 }
-
-
-.w3-bar .w3-button {
-  padding: 16px;
-}
-
-.w3-container {
-  width: 100%; /* Adjust as needed */
-  margin: auto; /* Centers the container */
-  display: flex;
-  justify-content: space-evenly; /* Centers child elements */
-  gap: 5%;
-  padding: 5% 0;
-}
+/* End of repeated footer on each page */

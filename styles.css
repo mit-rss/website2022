@@ -5,12 +5,13 @@ body, html {
   min-height: 100vh;
   margin: 0;
   line-height: 1.8;
-  background-color: #ff7e5f;
+  background-color: #D57056;
 }
 
+/* Repeated header on each page */
 .navbar {
-  background-color: #85182A;
-  color: #f9d4cf;
+  background-color: #751A2C;
+  color: #F0AFA5;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -50,49 +51,45 @@ body, html {
 }
 .navbar .menu {
   display: none;
-  align-items: center;  /* Center vertically */
-  justify-content: center;  /* Center horizontally */
-  padding: 0 12px;  /* Adjust padding if needed */
+  align-items: center;
+  justify-content: center;
+  padding: 0 12px;
   height: 100%;
   cursor: pointer;
 }
 .fade-in {
   opacity: 0.8;
 }
-.navbar:hover {
-  opacity: 1;
-}
 .navbar .team-name:hover {
-  background-color: #DC2F02;
+  background-color: #B33A3A;
 }
 .navbar .links a:hover {
-  background-color: #DC2F02;
+  background-color: #B33A3A;
 }
 .navbar .menu:hover {
-  background-color: #DC2F02;
+  background-color: #B33A3A;
 }
 @keyframes fade-in {
   0% {opacity: 0;}
   100% {opacity: 1;}
 }
 
-/* Default Sidebar Styles */
 .sidebar {
-  display: flex; /* Make sidebar visible by default */
+  display: flex;
   flex-direction: column;
   position: fixed;
-  top: -100%;
+  top: 60px; /* -100%; */
   right: 0;
-  background-color: #85182A;
+  background-color: #751A2C;
   width: 20%;
-  border-bottom-left-radius: 15px;
-  color: #f9d4cf;
+  /* border-bottom-left-radius: 15px; */
+  /* border-bottom-left-radius: 1vw; */
+  color: #F0AFA5;
   overflow: hidden;
+  transition: opacity 0.4s ease-in-out, top 0.5s ease-in-out, clip-path 0.3s ease-in-out;
+  clip-path: inset(0 0 calc(100% + 3vw) 0 round 0 0 0 15px);
   z-index: 999;
-  transition: top 0.5s ease-in-out; /* Transition effect */
 }
-
-/* Sidebar Links */
 .sidebar a {
   display: flex;
   align-items: center;
@@ -103,29 +100,28 @@ body, html {
   font-size: 2.5vw;
   cursor: pointer;
 }
-
-/* Hover effect */
 .sidebar a:hover {
-  background-color: #DC2F02;
+  background-color: #B33A3A;
 }
-
-/* Show sidebar when active */
 .sidebar.active {
-  top: 60px;
+  clip-path: inset(0 0 0 0 round 0 0 0 3vw);
+}
+.navcontainer:hover .navbar,
+.navcontainer:hover .sidebar {
+    opacity: 1;
 }
 
-/* Responsive Styles */
 @media (max-width: 600px) {
   .navbar .menu {
     display: flex;
   }
-
   .navbar .links {
     display: none;
   }
 }
+/* End of repeated header on each page */
 
-/* Full height image header */
+/* Title */
 .title {
   position: relative;
   height: 100vh;
@@ -143,10 +139,10 @@ body, html {
   color: transparent;
   background: linear-gradient(
     115deg,
-    #9D0208 0%,
-    #9D0208 16%,
-    #c20101 21%,
-    #c20101 25%,
+    #751A2C 0%,
+    #751A2C 16%,
+    #AF0000 21%,
+    #AF0000 25%,
     white 25%,
     white 26%,
     transparent 26%
@@ -169,9 +165,11 @@ body, html {
     background-position: 0% 0%;
   }
 }
+/* End of title */
 
+/* Team members */
 .team_container {
-  background-color: #f9d4cf;
+  background-color: #F0AFA5;
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -182,7 +180,8 @@ body, html {
   display: block;
   width: 100%;
   padding: 1%;
-  border-radius: 20px;
+  /* border-radius: 20px; */
+  border-radius: 2vw;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
 }
@@ -202,14 +201,16 @@ body, html {
 .team_member:hover {
   transform: scale(1.05);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  background-color: #fcafaf;
+  background-color: #F09083;
 }
+/* End of team members */
 
+/* About us */
 .about {
-  background-color: #85182A;
+  background-color: #751A2C;
   width: 100%;
   padding: 3%;
-  color: #f9d4cf;
+  color: #F0AFA5;
 }
 .about h1 {
   margin-top: 0;
@@ -218,42 +219,16 @@ body, html {
 .about p {
   font-size: 1.5vw;
 }
+/* End of about us */
 
-
-.contact_container {
-  background-color: #85182A;
-  width: 100%; /* Adjust as needed */
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  gap: 4%;
-  padding: 4%;
-  text-align: center;
-}
-.contact_container .card {
-  border-radius: 10px;
-  min-height: 200px;
-  padding: 2%;
-}
-.contact_container h1 {
-  margin: 0;
-  /* font-size: 18px; */
-  font-size: 4.5vw;
-}
-.contact_container p {
-  font-size: 1.5vw;
-}
-.contact_container i {
-  font-size: 2vw;
-}
-
+/* Repeated footer on each page */
 footer {
   padding: 3%;
-  background-color: #641220;
+  background-color: #251421;
 }
 footer p {
   text-align: center;
-  color: white;
+  color: #F0AFA5;
   font-size: 1vw;
   margin: 0;
   margin-top: 3.1%;
@@ -264,14 +239,14 @@ footer .buttons {
   justify-content: space-evenly;
 }
 .buttons button {
-  background-color: #9D0208;
+  background-color: #751A2C;
   padding: clamp(0px, 1.2vw, 7px) clamp(0px, 1.4vw, 8px);
   width: 30%;
   max-width: 133px;
 
   border-radius: 10px;
   border-width: 0;
-  color: white;
+  color: #F0AFA5;
   font-size: clamp(0px, 3vw, 15px);
 }
 .buttons i {
@@ -279,18 +254,6 @@ footer .buttons {
 }
 .buttons button:hover {
   cursor: pointer;
-  background-color: #DC2F02;
+  background-color: #B33A3A;
 }
-
-.w3-bar .w3-button {
-  padding: 16px;
-}
-
-.w3-container {
-  width: 100%; /* Adjust as needed */
-  margin: auto; /* Centers the container */
-  display: flex;
-  justify-content: space-evenly; /* Centers child elements */
-  gap: 5%;
-  padding: 5% 0;
-}
+/* End of repeated footer on each page */
