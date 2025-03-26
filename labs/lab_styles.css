@@ -2,71 +2,155 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 
 body, html {
   height: 100%;
+  min-height: 100vh;
+  margin: 0;
   line-height: 1.8;
-  background-color: #FAE0E4;
+  animation: back-gradient 20s infinite ease-in-out;
+}
+@keyframes back-gradient {
+  0%, 100% {background-color: #D57056;}
+  50% {background-color: #F09083;}
 }
 
-.w3-top a:hover {
-  background-color: #DC2F02 !important;
-  color: white !important;
-}
-.w3-sidebar a:hover {
-  background-color: #DC2F02 !important;
-  color: white !important;
-}
-
-/* Full height image header */
-.title_img {
+/* Repeated header on each page */
+.navbar {
+  background-color: #751A2C;
+  color: #F0AFA5;
   display: flex;
-  flex-direction: column;
-  background-attachment: fixed;
-  background-position: center -150px;
-  background-size: cover;
-  background-image: url("../img/mit.jpg");
   justify-content: space-between;
   align-items: center;
-  height: 50vh;
-  position: relative;
-
-  /* max-height: 30%; */
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 0;
+  width: 100%;
+  height: 60px;
+  opacity: 1;
+  transition: opacity 0.4s ease-in-out;
+  z-index: 1000;
 }
-.title_img h1 {
+.navbar .team-name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  margin: 0;
+  padding: 15px;
+  letter-spacing: 3.5px;
+  text-decoration: none;
+  cursor: pointer;
+}
+.navbar .links {
+  height: 100%;
+  display: flex;
+}
+.navbar .links a{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 12px;
+  text-decoration: none;
+  gap: 5px;
+  cursor: pointer;
+}
+.navbar .menu {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 0 12px;
+  height: 100%;
+  cursor: pointer;
+}
+.fade-in {
+  opacity: 1;
+}
+.navbar .team-name:hover {
+  background-color: #B33A3A;
+}
+.navbar .links a:hover {
+  background-color: #B33A3A;
+}
+.navbar .menu:hover {
+  background-color: #B33A3A;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 60px; /* -100%; */
+  right: 0;
+  background-color: #751A2C;
+  width: 20%;
+  color: #F0AFA5;
+  overflow: hidden;
+  opacity: 1;
+  transition: opacity 0.1s ease-in-out, clip-path 0.3s ease-in-out;
+  clip-path: inset(0 0 calc(100% + 3vw) 0 round 0 0 0 3vw);
+  z-index: 999;
+}
+.sidebar a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  padding: 10px;
+  gap: 5px;
+  font-size: 2.5vw;
+  cursor: pointer;
+}
+.sidebar a:hover {
+  background-color: #B33A3A;
+}
+.sidebar.active {
+  clip-path: inset(0 0 0 0 round 0 0 0 3vw);
+}
+.navcontainer:hover .navbar,
+.navcontainer:hover .sidebar {
+    opacity: 1;
+}
+
+@media (max-width: 600px) {
+  .navbar .menu {
+    display: flex;
+  }
+  .navbar .links {
+    display: none;
+  }
+}
+/* End of repeated header on each page */
+
+/* Title */
+.title {
+  position: relative;
+  height: 40vh;
+}
+.title h1 {
   position: absolute;
+  top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
-  text-align: center;
-  font-size: 7vw;
-  color: white;
-}
-.title_img p {
-    position: absolute;
-    top: 80%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-    width: 50%;
-    text-align: center;
-    font-size: 2vw;
-    color: white;
-}
-.lab-name {
   width: 100%;
-  padding: 0;
-  background-color: #F9BEC7;
-
   text-align: center;
-}
-.lab-name h1{
+  font-size: 5vw;
   margin: 0;
-  font-size: 3.5vw;
+  color: #751A2C ;
+  display: inline-block;
+  animation: title-text 0.5s forwards ease-in-out;
 }
+@keyframes title-text {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+/* End of title */
+
 .lab-content {
   display: block;
   width: 100%;
+  min-height: 390px;
   margin: 0;
   padding: 2%;
-  background-color: #FAE0E4;
-
+  background-color: #F0AFA5;
   text-align: center;
 }
 .lab-content h1 {
@@ -75,26 +159,50 @@ body, html {
 }
 .lab-content p {
   font-size: 1.5vw;
+  color: #751A2C;
+  margin: 0;
+  margin-bottom: 2%;
+}
+.lab-content a {
+  text-decoration: none;
 }
 .lab-content hr {
-  border: 1px solid #E85D04;
+  margin: 0 auto;
+  padding: 0;
+  border: 1px solid #D57056;
   border-radius: 5px;
+  width: 80%;
 }
 .lab-content iframe {
-  border-radius: 25px;
-  margin-bottom: 1.5%;
+  padding: 0;
+  margin: 2% 0;
+  border: 0;
+  border-radius: 2vw;
+  width: 80%;
+  height: auto;
+  aspect-ratio: 16 / 9;
 }
 .lab-content object {
-  border-radius: 25px;
+  padding: 0;
+  border-radius: 2vw;
+  margin: 2% 0;
+  margin-bottom: 0;
+  width: 80%;
+  height: 935px;
+}
+.lab-content a:hover {
+  font-weight: bold;
+  text-decoration: underline;
 }
 
+/* Repeated footer on each page */
 footer {
   padding: 3%;
-  background-color: #641220;
+  background-color: #251421;
 }
 footer p {
   text-align: center;
-  color: white;
+  color: #F0AFA5;
   font-size: 1vw;
   margin: 0;
   margin-top: 3.1%;
@@ -103,36 +211,25 @@ footer .buttons {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  gap: 5%;
 }
 .buttons button {
-  background-color: #9D0208;
-  padding: clamp(0px, 1.2vw, 7px) clamp(0px, 1.4vw, 7px);
-  width: 30%;
-  max-width: 140px;
+  background-color: #751A2C;
+  padding: clamp(0px, 1.2vw, 7px) clamp(0px, 1.4vw, 8px);
+  width: 100%;
+  max-width: 180px;
 
-  border-radius: 10px;
+  border-radius: 1.2vw;
   border-width: 0;
-  color: white;
-  font-size: clamp(0px, 3vw, 15px);
+  color: #F0AFA5;
+  font-size: clamp(0px, 2.5vw, 15px);
+  margin: 0;
 }
 .buttons i {
-  font-size: clamp(0px, 3vw, 15px);
+  font-size: clamp(0px, 2.5vw, 15px);
 }
 .buttons button:hover {
   cursor: pointer;
-  background-color: #DC2F02;
+  background-color: #B33A3A;
 }
-
-
-.w3-bar .w3-button {
-  padding: 16px;
-}
-
-.w3-container {
-  width: 100%; /* Adjust as needed */
-  margin: auto; /* Centers the container */
-  display: flex;
-  justify-content: space-evenly; /* Centers child elements */
-  gap: 5%;
-  padding: 5% 0;
-}
+/* End of repeated footer on each page */
