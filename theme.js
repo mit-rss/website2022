@@ -1,4 +1,8 @@
 (function() {
+  // ========== CHANGE YOUR TEAM NAME HERE ==========
+  var TEAM_NAME = 'Team TA';
+  // =================================================
+
   // Load saved preferences
   var savedTheme = localStorage.getItem('rss-theme') || 'light';
   var savedAccent = localStorage.getItem('rss-accent') || 'red';
@@ -24,6 +28,12 @@
         }, 3200);
       }
     }
+
+    // Apply team name everywhere
+    document.querySelectorAll('.team-name').forEach(function(el) {
+      el.textContent = TEAM_NAME;
+    });
+    document.title = document.title.replace('Team TA', TEAM_NAME);
 
     var panel = document.getElementById('themePanel');
     var toggleBtn = document.getElementById('themeToggleBtn');
