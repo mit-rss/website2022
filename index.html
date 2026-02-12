@@ -1,193 +1,155 @@
 <!DOCTYPE html>
-<html>
-<title>RSS Team TA</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<html lang="en">
+<head>
+  <title>RSS Team TA</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,600,700,800&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="theme.js"></script>
+</head>
 
-<style>
-body,p,h1,h2,h3,h4,h5,h6 {font-family: Palatino Linotype, sans-serif}
+<body id="home">
 
-body, html {
-  height: 100%;
-  line-height: 1.8;
-}
-
-/* Full height image header */
-.title_img {
-  background-position: center;
-  background-size: cover;
-  background-image: url("./img/mit.jpg");
-  height: 30%;
-  /* max-height: 30%; */
-}
-
-.team_member {
-    width: 20%; /* Change this so you can fit x Team members in a row*/
-    float: left;
-    padding: 0% 6px;
-    min-height: 500px;
-}
-.team_member p {
-  font-size: 10px;
-  font-size: 1.5vw;
-}
-.team_member h4 {
-  font-size: 20px;
-  font-size: 3vw;
-}
-
-.headshot {
-    display: block;
-    margin:auto;
-    max-width: 100%;
-    width: 200px;
-    height: 200px;
-    max-height: 200px;
-    overflow: hidden;
-}
-
-.w3-bar .w3-button {
-  padding: 16px;
-}
-</style>
-
-<body>
-<!-- If you change something in the Navbar you have to change it on each page (sit on top) -->
-<!-- MAKE SURE YOU GET THE RELATIVE PATHS RIGHT FOR THE NAV BAR!!!!-->
-<div class="w3-top">
-  <div class="w3-bar w3-white w3-card" id="myNavbar">
-    <a href="#home" class="w3-bar-item w3-button w3-wide">RSS Team TA</a>
-    <!-- Right-sided navbar links -->
-    <div class="w3-right w3-hide-small">
-      <a href="#about" class="w3-bar-item w3-button">About</a>
-      <a href="labs/" class="w3-bar-item w3-button"><i class="fa fa-folder"></i>Labs</a>
-      <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="w3-bar-item w3-button"><i class="fa fa-camera"></i>Videos</a>
-      <a href="https://github.com/mit-rss" class="w3-bar-item w3-button"><i class="fa fa-github-square"></i>Github</a>
+<!-- Navigation -->
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="#home" class="nav-brand">RSS Team TA</a>
+    <div class="nav-links">
+      <a href="#about" data-robot="🤖">About</a>
+      <a href="labs/" data-robot="🦾"><i class="fa fa-folder"></i> Labs</a>
+      <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" data-robot="🛸"><i class="fa fa-camera"></i> Videos</a>
+      <a href="https://github.com/mit-rss" data-robot="🔧"><i class="fa fa-github"></i> Github</a>
     </div>
-    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
-
-    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
-      <i class="fa fa-bars"></i>
-    </a>
+    <button class="nav-toggle" id="navToggle"><i class="fa fa-bars"></i></button>
   </div>
+</nav>
+
+<!-- Mobile Sidebar -->
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+<nav class="mobile-sidebar" id="mobileSidebar">
+  <a href="#about">About</a>
+  <a href="labs/">Labs</a>
+  <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Videos</a>
+  <a href="https://github.com/mit-rss">Github</a>
+</nav>
+
+<!-- Intro / Loading Screen -->
+<div class="intro-screen" id="introScreen">
+  <div class="intro-road"></div>
+  <div class="intro-car">
+    <div class="car-body">
+      <div class="car-cabin"></div>
+      <div class="car-wheel car-wheel-front"></div>
+      <div class="car-wheel car-wheel-back"></div>
+      <div class="car-exhaust"></div>
+      <div class="car-exhaust"></div>
+      <div class="car-exhaust"></div>
+    </div>
+    <div class="car-base"></div>
+  </div>
+  <div class="intro-text">RSS Team TA</div>
 </div>
 
-
-<!-- Sidebar on small screens when clicking the menu icon -->
-<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
-  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close X</a>
-  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">About</a>
-  <a href="labs/" onclick="w3_close()" class="w3-bar-item w3-button">Labs</a>
-  <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" onclick="w3_close()" class="w3-bar-item w3-button">Videos</a>
-  <a href="https://github.com/mit-rss" onclick="w3_close()" class="w3-bar-item w3-button">Github</a>
-</nav>
-<!-- End of repeated content on each page-->
-
-
-<!-- Header with full-height image -->
-<header class="title_img w3-display-container w3-grayscale-min" id="home">
-  <div class="w3-display-bottommiddle w3-text-white w3-center">
+<!-- Hero Header -->
+<header class="hero" style="background-image: url('./img/mit.jpg');">
+  <div class="hero-content">
     <h1>Team TA!</h1>
-    <p><a href="https://youtu.be/xLZU6TcSmRo" style="width:100%" class="w3-button w3-white w3-opacity w3-hover-opacity-off">
-        Innovation starts somewhere, so why not let it start here?
-    </a></p>
+    <p>Innovation starts somewhere, so why not let it start here?</p>
+    <a href="https://youtu.be/xLZU6TcSmRo" class="hero-btn">Watch Our Story</a>
   </div>
 </header>
 
-<div class="w3-container w3-white" style="padding:5% 5%">
-  <div class="w3-card team_member">
-      <img class="headshot" src="img/wall_e.jfif">
+<!-- Team Members -->
+<section class="section">
+  <h2 class="section-title">Meet the Team</h2>
+  <div class="team-grid">
+    <div class="team-card">
+      <img class="headshot" src="img/wall_e.jfif" alt="Tim Beaver">
       <h4>Tim Beaver</h4>
-      <p>tbeaver@mit.edu</p>
-      <p>These are some template bios; fill this in for each of your team members!
-      </p>
-  </div>
-  <div class="w3-card team_member">
-      <img class="headshot" src="img/r2.jpg">
+      <p class="email">tbeaver@mit.edu</p>
+      <p class="bio">These are some template bios; fill this in for each of your team members!</p>
+    </div>
+    <div class="team-card">
+      <img class="headshot" src="img/r2.jpg" alt="Tim Beaver">
       <h4>Tim Beaver</h4>
-      <p>tbeaver@mit.edu</p>
-      <p>These are some template bios; fill this in for each of your team members!
-      </p>
-  </div>
-  <div class="w3-card team_member">
-      <img class="headshot" src="img/wall_e.jfif">
+      <p class="email">tbeaver@mit.edu</p>
+      <p class="bio">These are some template bios; fill this in for each of your team members!</p>
+    </div>
+    <div class="team-card">
+      <img class="headshot" src="img/wall_e.jfif" alt="Tim Beaver">
       <h4>Tim Beaver</h4>
-      <p>tbeaver@mit.edu</p>
-      <p>These are some template bios; fill this in for each of your team members!
-      </p>
-  </div>
-  <div class="w3-card team_member">
-      <img class="headshot" src="img/r2.jpg">
+      <p class="email">tbeaver@mit.edu</p>
+      <p class="bio">These are some template bios; fill this in for each of your team members!</p>
+    </div>
+    <div class="team-card">
+      <img class="headshot" src="img/r2.jpg" alt="Tim Beaver">
       <h4>Tim Beaver</h4>
-      <p>tbeaver@mit.edu</p>
-      <p>These are some template bios; fill this in for each of your team members!
-      </p>
-  </div>
-  <div class="w3-card team_member">
-      <img class="headshot" src="img/wall_e.jfif">
+      <p class="email">tbeaver@mit.edu</p>
+      <p class="bio">These are some template bios; fill this in for each of your team members!</p>
+    </div>
+    <div class="team-card">
+      <img class="headshot" src="img/wall_e.jfif" alt="Tim Beaver">
       <h4>Tim Beaver</h4>
-      <p>tbeaver@mit.edu</p>
-      <p>These are some template bios; fill this in for each of your team members!
-      </p>
+      <p class="email">tbeaver@mit.edu</p>
+      <p class="bio">These are some template bios; fill this in for each of your team members!</p>
+    </div>
   </div>
-</div>
+</section>
 
-<!-- Contact Section -->
-<div class="w3-container w3-grey" style="padding:5% 5%;text-align:center;" id="about">
-  <div class="w3-card w3-white" style="width:100%">
-    <h1>About Us</h1>
+<!-- About Section -->
+<section class="about-section" id="about">
+  <div class="section">
+    <h2 class="section-title">About Us</h2>
+    <div class="features-grid">
+      <div class="feature-card">
+        <i class="fa fa-rocket"></i>
+        <h3>Our Mission</h3>
+        <p>Do something that is unique here. (You can change this to team values or something?)</p>
+      </div>
+      <div class="feature-card">
+        <i class="fa fa-cogs"></i>
+        <h3>What We Do</h3>
+        <p>The TAs are not that unique, so we are just writing a lot of filler things here so we look cool.</p>
+      </div>
+      <div class="feature-card">
+        <i class="fa fa-lightbulb-o"></i>
+        <h3>Our Values</h3>
+        <p>Si vos es pulchellus frigus hanc: et admonitus in hoc genere digna est. It tristis et non dederint tibi. Benediximus</p>
+      </div>
+    </div>
   </div>
-  <div class="w3-cell w3-red" style="width:30%;float:left;min-height: 200px;">
-      <i class="fa fa-folder"></i> <!--Put an image here or something?-->
-      <p>Do something that is unique here. (You can change this to team values or something?)</p>
-  </div>
-  <div class="w3-cell w3-white" style="width:30%;margin-left:5%;float:left;min-height: 200px;">
-      <i class="fa fa-folder"></i><!--Put an image here or something?-->
-      <p>The TAs are not that unique, so we are just writing a lot of filler things here so we look cool.</p>
-  </div>
-  <div class="w3-cell w3-blue" style="width:30%;margin-left:5%;float:left;min-height: 200px;">
-      <i class="fa fa-folder"></i><!--Put an image here or something?-->
-      <p>Si vos es pulchellus frigus hanc: et admonitus in hoc genere digna est. It tristis et non dederint tibi. Benediximus</p>
-  </div>
-</div>
-
-
-</body>
+</section>
 
 <!-- Footer -->
-<footer class="w3-center w3-black w3-padding-64">
-  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
-  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+<footer class="site-footer">
+  <div class="footer-nav">
+    <a href="#home" class="btn"><i class="fa fa-arrow-up"></i> Back to top</a>
+  </div>
+  <p class="credit">Powered by <a href="https://www.w3schools.com/w3css/default.asp">w3.css</a></p>
 </footer>
 
-<script>
-// Modal Image Gallery
-function onClick(element) {
-  document.getElementById("img01").src = element.src;
-  document.getElementById("modal01").style.display = "block";
-  var captionText = document.getElementById("caption");
-  captionText.innerHTML = element.alt;
-}
+<!-- Theme Switcher -->
+<button class="theme-toggle-btn" id="themeToggleBtn"><i class="fa fa-paint-brush"></i></button>
+<div class="theme-panel" id="themePanel">
+  <h4>Accent Color</h4>
+  <div class="color-swatches">
+    <div class="color-swatch" data-color="red" title="Red"></div>
+    <div class="color-swatch" data-color="blue" title="Blue"></div>
+    <div class="color-swatch" data-color="teal" title="Teal"></div>
+    <div class="color-swatch" data-color="purple" title="Purple"></div>
+    <div class="color-swatch" data-color="orange" title="Orange"></div>
+  </div>
+  <div class="dark-toggle">
+    <span>Dark Mode</span>
+    <label class="switch">
+      <input type="checkbox" id="darkModeCheckbox">
+      <span class="slider"></span>
+    </label>
+  </div>
+</div>
 
-
-// Toggle between showing and hiding the sidebar when clicking the menu icon
-var mySidebar = document.getElementById("mySidebar");
-
-function w3_open() {
-  if (mySidebar.style.display === 'block') {
-    mySidebar.style.display = 'none';
-  } else {
-    mySidebar.style.display = 'block';
-  }
-}
-
-// Close the sidebar with the close button
-function w3_close() {
-    mySidebar.style.display = "none";
-}
-</script>
-
+</body>
 </html>

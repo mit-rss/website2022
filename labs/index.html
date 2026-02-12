@@ -1,122 +1,110 @@
 <!DOCTYPE html>
-<html>
-<title>RSS Team TA</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
-
-body, html {
-  height: 100%;
-  line-height: 1.8;
-}
-
-/* Full height image header */
-.title_img {
-  background-position: center;
-  background-size: cover;
-  background-image: url("../img/mit.jpg");
-  height: 30%;
-  /* max-height: 30%; */
-}
-
-.w3-bar .w3-button {
-  padding: 16px;
-}
-</style>
-
+<html lang="en">
+<head>
+  <title>RSS Team TA - Labs</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,600,700,800&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../style.css">
+  <script src="../theme.js"></script>
+</head>
 
 <body>
-<!-- If you change something in the Navbar you have to change it on each page (sit on top) -->
-<!-- MAKE SURE YOU GET THE RELATIVE PATHS RIGHT FOR THE NAV BAR!!!!-->
-<div class="w3-top">
-  <div class="w3-bar w3-white w3-card" id="myNavbar">
-    <a href="../#home" class="w3-bar-item w3-button w3-wide">RSS Team TA</a>
-    <!-- Right-sided navbar links -->
-    <div class="w3-right w3-hide-small">
-      <a href="../#about" class="w3-bar-item w3-button">About</a>
-      <a href="./" class="w3-bar-item w3-button"><i class="fa fa-folder"></i> Labs</a>
-      <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="w3-bar-item w3-button"><i class="fa fa-camera"></i>Videos</a>
-      <a href="https://github.com/mit-rss" class="w3-bar-item w3-button"><i class="fa fa-github-square"></i>Github</a>
-    </div>
-    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
 
-    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
-      <i class="fa fa-bars"></i>
-    </a>
+<!-- Navigation -->
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="../#home" class="nav-brand">RSS Team TA</a>
+    <div class="nav-links">
+      <a href="../#about" data-robot="🤖">About</a>
+      <a href="./" data-robot="🦾"><i class="fa fa-folder"></i> Labs</a>
+      <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" data-robot="🛸"><i class="fa fa-camera"></i> Videos</a>
+      <a href="https://github.com/mit-rss" data-robot="🔧"><i class="fa fa-github"></i> Github</a>
+    </div>
+    <button class="nav-toggle" id="navToggle"><i class="fa fa-bars"></i></button>
+  </div>
+</nav>
+
+<!-- Mobile Sidebar -->
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+<nav class="mobile-sidebar" id="mobileSidebar">
+  <a href="../#about">About</a>
+  <a href="./">Labs</a>
+  <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Videos</a>
+  <a href="https://github.com/mit-rss">Github</a>
+</nav>
+
+<!-- Intro / Loading Screen -->
+<div class="intro-screen" id="introScreen">
+  <div class="intro-road"></div>
+  <div class="intro-car">
+    <div class="car-body">
+      <div class="car-cabin"></div>
+      <div class="car-wheel car-wheel-front"></div>
+      <div class="car-wheel car-wheel-back"></div>
+      <div class="car-exhaust"></div>
+      <div class="car-exhaust"></div>
+      <div class="car-exhaust"></div>
+    </div>
+    <div class="car-base"></div>
+  </div>
+  <div class="intro-text">RSS Team TA</div>
+</div>
+
+<!-- Hero Header -->
+<header class="hero" style="background-image: url('../img/mit.jpg');">
+  <div class="hero-content">
+    <h1>Lab Work</h1>
+    <p>What we've done for Robotics: Science and Systems</p>
+  </div>
+</header>
+
+<!-- Lab Cards -->
+<section class="section">
+  <h2 class="section-title">Our Labs</h2>
+  <div class="labs-grid">
+    <!-- Example Lab -->
+    <div class="lab-card">
+      <img src="img/charles.jpg" alt="Example Lab">
+      <div class="lab-card-body">
+        <h3>Lab 0: Example Lab</h3>
+        <p>Example of rendering html and embedding your presentation and report pdf.</p>
+        <a href="example_lab" class="btn"><i class="fa fa-info-circle"></i> More Info</a>
+      </div>
+    </div>
+    <!-- Add more lab cards here -->
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="site-footer">
+  <div class="footer-nav">
+    <a href="#" class="btn"><i class="fa fa-arrow-up"></i> Back to top</a>
+  </div>
+  <p class="credit">Powered by <a href="https://www.w3schools.com/w3css/default.asp">w3.css</a></p>
+</footer>
+
+<!-- Theme Switcher -->
+<button class="theme-toggle-btn" id="themeToggleBtn"><i class="fa fa-paint-brush"></i></button>
+<div class="theme-panel" id="themePanel">
+  <h4>Accent Color</h4>
+  <div class="color-swatches">
+    <div class="color-swatch" data-color="red" title="Red"></div>
+    <div class="color-swatch" data-color="blue" title="Blue"></div>
+    <div class="color-swatch" data-color="teal" title="Teal"></div>
+    <div class="color-swatch" data-color="purple" title="Purple"></div>
+    <div class="color-swatch" data-color="orange" title="Orange"></div>
+  </div>
+  <div class="dark-toggle">
+    <span>Dark Mode</span>
+    <label class="switch">
+      <input type="checkbox" id="darkModeCheckbox">
+      <span class="slider"></span>
+    </label>
   </div>
 </div>
 
-
-<!-- Sidebar on small screens when clicking the menu icon -->
-<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
-  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close X</a>
-  <a href="../#about" onclick="w3_close()" class="w3-bar-item w3-button">About</a>
-  <a href="./" onclick="w3_close()" class="w3-bar-item w3-button">Labs</a>
-  <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" onclick="w3_close()" class="w3-bar-item w3-button">Videos</a>
-  <a href="https://github.com/mit-rss" onclick="w3_close()" class="w3-bar-item w3-button">Github</a>
-</nav>
-
-<header class="title_img w3-display-container w3-grayscale-min">
-  <div class="w3-display-bottommiddle w3-text-white w3-center">
-    <h1 class="w3-center" style="font-weight:bold">LAB WORK</h1> </br>
-    <p class="w3-center" style="font-weight:bold">What we've done for Robotics: Science and Systems</p>
-  </div>
-</header>
-  <!-- End of repeated content on each page-->
-
-  <!-- Lab Sections -->
-  <div class="w3-row-padding w3-white">
-    <!-- Example Lab -->
-    <div class="w3-col l6 m6 w3-margin-bottom" style="margin-top:16px;max-width:50%">
-      <div class="w3-card w3-center" style="min-height:600px">
-        </br>
-        <img src="img/charles.jpg" alt="Survival" style="width:95%" onclick="onClick(this)" class="w3-hover-opacity">
-        <div class="w3-container" style="margin-top:auto">
-          <h3><a href="example_lab">Lab 0: Example Lab</h3>
-          <p>Example of rendering html and embedding your presentation and report pdf.</p>
-          <p><a href="example_lab"><button class="w3-button w3-light-grey w3-block"><i class="fa fa-info-circle"></i> More info</button></a></p>
-        </div>
-      </div>
-    </div>
-  <!-- end the lab section -->
-  </div>
-
 </body>
-
-<!-- Footer -->
-<footer class="w3-center w3-black w3-padding-64">
-  <a href="#labs" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
-  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
-</footer>
-
-<script>
-// Modal Image Gallery
-function onClick(element) {
-  document.getElementById("img01").src = element.src;
-  document.getElementById("modal01").style.display = "block";
-  var captionText = document.getElementById("caption");
-  captionText.innerHTML = element.alt;
-}
-
-// Toggle between showing and hiding the sidebar when clicking the menu icon
-var mySidebar = document.getElementById("mySidebar");
-
-function w3_open() {
-  if (mySidebar.style.display === 'block') {
-    mySidebar.style.display = 'none';
-  } else {
-    mySidebar.style.display = 'block';
-  }
-}
-
-// Close the sidebar with the close button
-function w3_close() {
-    mySidebar.style.display = "none";
-}
-</script>
-
 </html>
