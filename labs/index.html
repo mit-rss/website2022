@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <title>RSS Portfolio - Labs</title>
   <meta charset="UTF-8">
@@ -13,89 +14,90 @@
 
 <body>
 
-<!-- Navigation -->
-<nav class="site-nav">
-  <div class="nav-inner">
-    <a href="../#home" class="nav-brand">RSS Team 11</a>
-    <div class="nav-links">
-      <a href="../#about" data-robot="🤖">About</a>
-      <a href="./" data-robot="🦾"><i class="fa fa-folder"></i> Labs</a>
-      <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" data-robot="🛸"><i class="fa fa-camera"></i> Videos</a>
-      <a href="https://github.com/rss2026-11" data-robot="🔧"><i class="fa fa-github"></i> Github</a>
+  <!-- Navigation -->
+  <nav class="site-nav">
+    <div class="nav-inner">
+      <a href="../#home" class="nav-brand">RSS Team 11</a>
+      <div class="nav-links">
+        <a href="../#about" data-robot="🤖">About</a>
+        <a href="./" data-robot="🦾"><i class="fa fa-folder"></i> Labs</a>
+        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" data-robot="🛸"><i class="fa fa-camera"></i> Videos</a>
+        <a href="https://github.com/rss2026-11" data-robot="🔧"><i class="fa fa-github"></i> Github</a>
+      </div>
+      <button class="nav-toggle" id="navToggle"><i class="fa fa-bars"></i></button>
     </div>
-    <button class="nav-toggle" id="navToggle"><i class="fa fa-bars"></i></button>
-  </div>
-</nav>
+  </nav>
 
-<!-- Mobile Sidebar -->
-<div class="sidebar-overlay" id="sidebarOverlay"></div>
-<nav class="mobile-sidebar" id="mobileSidebar">
-  <a href="../#about">About</a>
-  <a href="./">Labs</a>
-  <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Videos</a>
-  <a href="https://github.com/rss2026-11">Github</a>
-</nav>
+  <!-- Mobile Sidebar -->
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+  <nav class="mobile-sidebar" id="mobileSidebar">
+    <a href="../#about">About</a>
+    <a href="./">Labs</a>
+    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Videos</a>
+    <a href="https://github.com/rss2026-11">Github</a>
+  </nav>
 
-<!-- Hero Header -->
-<header class="hero" style="background-image: url('../img/mit.jpg');">
-  <div class="hero-content">
-    <h1>Lab Work</h1>
-    <p>What we've done for Robotics: Science and Systems</p>
-  </div>
-</header>
+  <!-- Hero Header -->
+  <header class="hero" style="background-image: url('../img/mit.jpg');">
+    <div class="hero-content">
+      <h1>Lab Work</h1>
+      <p>What we've done for Robotics: Science and Systems</p>
+    </div>
+  </header>
 
-<!-- Lab Cards -->
-<section class="section">
-  <h2 class="section-title">Our Labs</h2>
-  <div class="labs-grid">
-    <!-- Example Lab -->
-    <div class="lab-card">
-      <img src="img/charles.jpg" alt="Lab 3">
-      <div class="lab-card-body">
-        <h3>Lab 3: Wall Follower and Safety Control</h3>
-        <p>Implementation of wall following robot with ability to stop for objects.</p>
-        <a href="example_lab" class="btn"><i class="fa fa-info-circle"></i> More Info</a>
+  <!-- Lab Cards -->
+  <section class="section">
+    <h2 class="section-title">Our Labs</h2>
+    <div class="labs-grid">
+      <!-- Example Lab -->
+      <div class="lab-card">
+        <img src="img/charles.jpg" alt="Lab 3">
+        <div class="lab-card-body">
+          <h3>Lab 3: Wall Follower and Safety Control</h3>
+          <p>Implementation of wall following robot with ability to stop for objects.</p>
+          <a href="example_lab" class="btn"><i class="fa fa-info-circle"></i> More Info</a>
+        </div>
+      </div>
+      <!-- Add more lab cards here -->
+      <div class="lab-card">
+        <img src="img/charles.jpg" alt=" Lab 4">
+        <div class="lab-card-body">
+          <h3>Lab 4: Visual Servoing</h3>
+          <p>Implementation of visual servoing algorithm to be able to successfully follow a line.</p>
+          <a href="lab_4/lab_4.html#lab-4" class="btn"><i class="fa fa-info-circle"></i> More Info</a>
+        </div>
       </div>
     </div>
-    <!-- Add more lab cards here -->
-    <div class="lab-card">
-      <img src="img/charles.jpg" alt=" Lab 4">
-      <div class="lab-card-body">
-        <h3>Lab 4: Visual Servoing</h3>
-        <p>Implementation of visual servoing algorithm to be able to successfully follow a line.</p>
-        <a href="lab_4/lab_4.html" class="btn"><i class="fa fa-info-circle"></i> More Info</a>
-      </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-nav">
+      <a href="#" class="btn"><i class="fa fa-arrow-up"></i> Back to top</a>
+    </div>
+    <p class="credit">Powered by <a href="https://www.w3schools.com/w3css/default.asp">w3.css</a></p>
+  </footer>
+
+  <!-- Theme Switcher -->
+  <button class="theme-toggle-btn" id="themeToggleBtn"><i class="fa fa-paint-brush"></i></button>
+  <div class="theme-panel" id="themePanel">
+    <h4>Accent Color</h4>
+    <div class="color-swatches">
+      <div class="color-swatch" data-color="red" title="Red"></div>
+      <div class="color-swatch" data-color="blue" title="Blue"></div>
+      <div class="color-swatch" data-color="teal" title="Teal"></div>
+      <div class="color-swatch" data-color="purple" title="Purple"></div>
+      <div class="color-swatch" data-color="orange" title="Orange"></div>
+    </div>
+    <div class="dark-toggle">
+      <span>Dark Mode</span>
+      <label class="switch">
+        <input type="checkbox" id="darkModeCheckbox">
+        <span class="slider"></span>
+      </label>
     </div>
   </div>
-</section>
-
-<!-- Footer -->
-<footer class="site-footer">
-  <div class="footer-nav">
-    <a href="#" class="btn"><i class="fa fa-arrow-up"></i> Back to top</a>
-  </div>
-  <p class="credit">Powered by <a href="https://www.w3schools.com/w3css/default.asp">w3.css</a></p>
-</footer>
-
-<!-- Theme Switcher -->
-<button class="theme-toggle-btn" id="themeToggleBtn"><i class="fa fa-paint-brush"></i></button>
-<div class="theme-panel" id="themePanel">
-  <h4>Accent Color</h4>
-  <div class="color-swatches">
-    <div class="color-swatch" data-color="red" title="Red"></div>
-    <div class="color-swatch" data-color="blue" title="Blue"></div>
-    <div class="color-swatch" data-color="teal" title="Teal"></div>
-    <div class="color-swatch" data-color="purple" title="Purple"></div>
-    <div class="color-swatch" data-color="orange" title="Orange"></div>
-  </div>
-  <div class="dark-toggle">
-    <span>Dark Mode</span>
-    <label class="switch">
-      <input type="checkbox" id="darkModeCheckbox">
-      <span class="slider"></span>
-    </label>
-  </div>
-</div>
 
 </body>
+
 </html>
